@@ -1,0 +1,291 @@
+{
+ "answer_variants": [
+  " {a}",
+  "{a}",
+  " {A}",
+  "{A}"
+ ],
+ "based_on": {
+  "base_config": "configs/data/relations.yaml",
+  "base_config_sha256": "3224a526920981a0feb9deba63e473b7b82cf3042b209de544234e991ba1e764",
+  "overrides": {
+   "relations": {
+    "R5": {
+     "answer_forms": {
+      "are": [
+       "are",
+       "were"
+      ],
+      "is": [
+       "is",
+       "was"
+      ]
+     },
+     "answers": {
+      "plural": "are",
+      "singular": "is"
+     },
+     "exemplar_answers": [
+      "is",
+      "are"
+     ],
+     "items": {
+      "file": "configs/data/agreement_nouns.yaml",
+      "kind": "number_agreement",
+      "license": "project-declared list"
+     },
+     "keep": "the declared nouns (configs/data/agreement_nouns.yaml); the singular and plural of one noun form a pair when both have the same token count",
+     "name": "number_agreement",
+     "pairing": "same_lemma",
+     "templates": {
+      "T1": "The {c1} over there {a1} new.\nThe {c2} over there {a2} new.\nThe {q} over there",
+      "T2": "In the shop, the {c1} on the left {a1} cheap, and the {c2} on the left {a2} cheap. In the shop, the {q} on the left",
+      "T3": "Q: Is or are? The {c1} over there ___ new.\nA: {a1}\n\nQ: Is or are? The {c2} over there ___ new.\nA: {a2}\n\nQ: Is or are? The {q} over there ___ new.\nA:"
+     }
+    },
+    "R6": {
+     "answers": {
+      "negative": "negative",
+      "positive": "positive"
+     },
+     "exemplar_answers": [
+      "positive",
+      "negative"
+     ],
+     "items": {
+      "file": "configs/data/sentiment_adjectives.yaml",
+      "kind": "word_classes",
+      "license": "project-declared list"
+     },
+     "keep": "the declared adjectives (configs/data/sentiment_adjectives.yaml); a positive and a negative adjective of the same token count form a pair, seeded",
+     "name": "film_sentiment",
+     "templates": {
+      "T1": "Review: The film was {c1}.\nSentiment: {a1}\n\nReview: The film was {c2}.\nSentiment: {a2}\n\nReview: The film was {q}.\nSentiment:",
+      "T2": "The film was {c1}, so the review is {a1}. The film was {c2}, so the review is {a2}. The film was {q}, so the review is",
+      "T3": "Q: The film was {c1}. Is the review positive or negative?\nA: {a1}\n\nQ: The film was {c2}. Is the review positive or negative?\nA: {a2}\n\nQ: The film was {q}. Is the review positive or negative?\nA:"
+     }
+    },
+    "active": [
+     "R5"
+    ],
+    "reserve": "R6"
+   }
+  }
+ },
+ "counts": {
+  "after_copy_filter": 137,
+  "after_source_rules": 137,
+  "dev_pairs": 12,
+  "pairs": 56,
+  "source": 137,
+  "test_pairs": 44
+ },
+ "data_config_sha256": "2b22d89faf269caa33e36d406465dafd11209d48669be23d1af4fd83ba6051ca",
+ "excluded": [
+  {
+   "item": "exquisite",
+   "reason": "no compatible partner with 1 tokens"
+  },
+  {
+   "item": "fabulous",
+   "reason": "no compatible partner with 1 tokens"
+  },
+  {
+   "item": "enchanting",
+   "reason": "no compatible partner with 1 tokens"
+  },
+  {
+   "item": "gorgeous",
+   "reason": "no compatible partner with 1 tokens"
+  },
+  {
+   "item": "outstanding",
+   "reason": "no compatible partner with 1 tokens"
+  },
+  {
+   "item": "breathtaking",
+   "reason": "no compatible partner with 1 tokens"
+  },
+  {
+   "item": "phenomenal",
+   "reason": "no compatible partner with 1 tokens"
+  },
+  {
+   "item": "glorious",
+   "reason": "no compatible partner with 1 tokens"
+  },
+  {
+   "item": "fun",
+   "reason": "no compatible partner with 1 tokens"
+  },
+  {
+   "item": "fascinating",
+   "reason": "no compatible partner with 1 tokens"
+  },
+  {
+   "item": "riveting",
+   "reason": "no compatible partner with 1 tokens"
+  },
+  {
+   "item": "vapid",
+   "reason": "no compatible partner with 2 tokens"
+  },
+  {
+   "item": "uninspired",
+   "reason": "no compatible partner with 2 tokens"
+  },
+  {
+   "item": "joyless",
+   "reason": "no compatible partner with 2 tokens"
+  },
+  {
+   "item": "forgettable",
+   "reason": "no compatible partner with 2 tokens"
+  },
+  {
+   "item": "abysmal",
+   "reason": "no compatible partner with 2 tokens"
+  },
+  {
+   "item": "ghastly",
+   "reason": "no compatible partner with 2 tokens"
+  },
+  {
+   "item": "overlong",
+   "reason": "no compatible partner with 2 tokens"
+  },
+  {
+   "item": "trite",
+   "reason": "no compatible partner with 2 tokens"
+  },
+  {
+   "item": "amateurish",
+   "reason": "no compatible partner with 2 tokens"
+  },
+  {
+   "item": "insipid",
+   "reason": "no compatible partner with 2 tokens"
+  },
+  {
+   "item": "unwatchable",
+   "reason": "no compatible partner with 3 tokens"
+  },
+  {
+   "item": "unfunny",
+   "reason": "no compatible partner with 3 tokens"
+  }
+ ],
+ "exemplar_answers": [
+  "positive",
+  "negative"
+ ],
+ "exemplars": [
+  {
+   "answer": "positive",
+   "concept": "engaging"
+  },
+  {
+   "answer": "negative",
+   "concept": "disappointing"
+  }
+ ],
+ "minimum": {
+  "dev_pairs": 12,
+  "met": true,
+  "test_pairs": 40
+ },
+ "n_records": 672,
+ "pairs": {
+  "dev": [
+   "excellent|unbearable",
+   "exciting|messy",
+   "extraordinary|incompetent",
+   "gripping|horrid",
+   "inventive|pointless",
+   "marvelous|irritating",
+   "nice|ugly",
+   "stellar|bloated",
+   "stunning|hollow",
+   "sublime|worthless",
+   "thrilling|confusing",
+   "wonderful|dismal"
+  ],
+  "test": [
+   "amazing|lame",
+   "awesome|dull",
+   "beautiful|ridiculous",
+   "brilliant|pretentious",
+   "captivating|repetitive",
+   "compelling|bland",
+   "dazzling|miserable",
+   "delightful|bad",
+   "elegant|laughable",
+   "enjoyable|clumsy",
+   "entertaining|annoying",
+   "fantastic|awkward",
+   "flawless|sloppy",
+   "funny|pathetic",
+   "good|dreary",
+   "great|useless",
+   "heartfelt|lifeless",
+   "hilarious|painful",
+   "impressive|sluggish",
+   "incredible|horrible",
+   "joyful|terrible",
+   "lovely|stale",
+   "magical|tiresome",
+   "magnificent|tedious",
+   "masterful|rotten",
+   "mediocre|charming",
+   "memorable|awful",
+   "perfect|incoherent",
+   "pleasant|stupid",
+   "poor|inspiring",
+   "powerful|appalling",
+   "refreshing|inept",
+   "remarkable|frustrating",
+   "satisfying|weak",
+   "sensational|atrocious",
+   "shallow|clever",
+   "smart|cheap",
+   "splendid|boring",
+   "superb|tasteless",
+   "terrific|lousy",
+   "touching|mindless",
+   "tremendous|silly",
+   "uplifting|dreadful",
+   "witty|predictable"
+  ]
+ },
+ "pairs_by_token_count": {
+  "1": 56
+ },
+ "records_file": "records.jsonl.gz",
+ "records_sha256": "fe82c884ad21afcd7480afc14e76b7ccef46d8fab7f90dc33ba8ea2a73fad989",
+ "relation": "film_sentiment",
+ "role_in_design": "reserve",
+ "rules": "the declared adjectives (configs/data/sentiment_adjectives.yaml); a positive and a negative adjective of the same token count form a pair, seeded",
+ "sources": [
+  {
+   "file": "configs/data/sentiment_adjectives.yaml",
+   "license": "project-declared list",
+   "sha256": "f1d899d64cd04f6c8072dcfd8174fa388a90555c8fa1df889d658900fa4ace3d"
+  }
+ ],
+ "split_seed": 20260928,
+ "task": "R6",
+ "templates": {
+  "T1": "Review: The film was {c1}.\nSentiment: {a1}\n\nReview: The film was {c2}.\nSentiment: {a2}\n\nReview: The film was {q}.\nSentiment:",
+  "T2": "The film was {c1}, so the review is {a1}. The film was {c2}, so the review is {a2}. The film was {q}, so the review is",
+  "T3": "Q: The film was {c1}. Is the review positive or negative?\nA: {a1}\n\nQ: The film was {c2}. Is the review positive or negative?\nA: {a2}\n\nQ: The film was {q}. Is the review positive or negative?\nA:"
+ },
+ "tokenizer": {
+  "bos_token": "<bos>",
+  "bos_token_id": 2,
+  "chat_template_sha256": "7de1c58e208eda46e9c7f86397df37ec49883aeece39fb961e0a6b24088dd3c4",
+  "class": "GemmaTokenizer",
+  "name_or_path": "google/gemma-3-12b-it",
+  "vocab_sha256": "4a6a175ef6cddcbc5bfdc07d086c6a58cdec7a4e36a066b5722a7e933a46da92",
+  "vocab_size": 262145
+ }
+}

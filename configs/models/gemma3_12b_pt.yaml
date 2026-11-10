@@ -1,0 +1,32 @@
+name: gemma3_12b_pt
+source: hf
+checkpoint_kind: pt
+repo_id: google/gemma-3-12b-pt
+revision: 295efb63d01a7017928f273a94ebb86105c9526f
+dtype: bfloat16
+precision_reference: fp32_residual
+lens:
+  repo_id: neuronpedia/jacobian-lens
+  revision: b25d72a96b79c8e309d6625955a98751da47e67a
+  filename: gemma-3-12b/jlens/Salesforce-wikitext/gemma-3-12b-pt_jacobian_lens.pt
+  fit_corpus: Salesforce/wikitext wikitext-103-raw-v1 train
+sae:
+  repo_id: google/gemma-scope-2-12b-pt
+  revision: bbabd1e4a3964914f5bf0f5f99b56c2a2da09802
+  site: resid_post
+  candidate_layers:
+  - 12
+  - 24
+  - 31
+  - 41
+  width: 65k
+  l0: medium
+  fallback:
+    width: 262k
+    l0: medium
+  swap:
+  - width: 65k
+    l0: medium
+    repo_id: google/gemma-scope-2-12b-it
+    revision: 4c419f1ba0be8b7754d4151d4f26c23b92a9029e
+    tag: it_sae

@@ -1,0 +1,13 @@
+data_dir: data/built_llama
+n_per_group: 20
+max_new_tokens: 24
+seed: 20260929
+groups:
+  relations:
+    families:
+    - R5_number_agreement
+    - R6_film_sentiment
+    by:
+    - template_id
+    roles:
+    - source

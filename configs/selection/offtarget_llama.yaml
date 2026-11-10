@@ -1,0 +1,31 @@
+base: configs/selection/gemma_it.yaml
+data_dir: data/built_llama
+stage0_runs:
+  llama3_1_8b: runs/inventory-llama
+extension:
+  id: X8b
+  kind: endpoint
+  parent_frozen: runs/selection-llama-dev/frozen_protocol.json
+k_grid:
+- 4
+alpha_grid:
+- 1
+offtarget: true
+hybrids:
+  NORM+KAPPA:
+  - NORM
+  - KAPPA
+  NORM+JSPACE:
+  - NORM
+  - JSPACE
+offtarget_contrasts:
+- - JL-OUT
+  - LL-OUT
+- - NORM
+  - JL-OUT
+- - NORM
+  - ORACLE
+- - NORM+KAPPA
+  - NORM
+- - NORM+JSPACE
+  - NORM

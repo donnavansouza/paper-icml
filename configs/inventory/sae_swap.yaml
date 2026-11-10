@@ -1,0 +1,6 @@
+base: configs/inventory/gemma_it.yaml
+scope: sae_variants
+sae_variant_layers:
+- 12
+- 24
+sae_variant_list: swap

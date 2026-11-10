@@ -1,0 +1,37 @@
+design: controls
+seed: 20261016
+variants:
+  JL-RES:
+    draws: 3
+  JL-RESPERM:
+    draws: 3
+  JL-INTERP:
+    t:
+    - 0.25
+    - 0.5
+    - 0.75
+contrasts:
+- - JL-OUT
+  - JL-RES
+- - JL-OUT
+  - JL-RESPERM
+partial_given_NORM: true
+j_diagnostics: true
+timing:
+  n_prompts: 20
+parity_max_abs_m1: 0.01
+parity_swap_bound: true
+holm_alpha: 0.05
+parents:
+  gemma3_12b_it:
+    frozen: runs/selection-gemma-it-dev/frozen_protocol.json
+    dev_run: runs/selection-gemma-it-dev
+    test_run: runs/selection-gemma-it-test
+  llama3_1_8b:
+    frozen: runs/selection-llama-dev/frozen_protocol.json
+    dev_run: runs/selection-llama-dev
+    test_run: runs/selection-llama-test
+  gemma3_12b_pt:
+    frozen: runs/selection-gemma-base-dev/frozen_protocol.json
+    dev_run: runs/selection-gemma-base-dev
+    test_run: runs/selection-gemma-base-test

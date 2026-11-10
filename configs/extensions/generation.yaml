@@ -1,0 +1,23 @@
+seed: 20261023
+subset_seed: 20261029
+n_pairs: 40
+max_new_tokens: 8
+selectors:
+- JL-OUT
+- LL-OUT
+- NORM
+- ATP
+- ORACLE
+parents:
+  gemma3_12b_it:
+    frozen: runs/selection-gemma-it-dev/frozen_protocol.json
+    dev_run: runs/selection-gemma-it-dev
+    test_run: runs/selection-gemma-it-test
+  llama3_1_8b:
+    frozen: runs/selection-llama-dev/frozen_protocol.json
+    dev_run: runs/selection-llama-dev
+    test_run: runs/selection-llama-test
+  gemma3_12b_pt:
+    frozen: runs/selection-gemma-base-dev/frozen_protocol.json
+    dev_run: runs/selection-gemma-base-dev
+    test_run: runs/selection-gemma-base-test

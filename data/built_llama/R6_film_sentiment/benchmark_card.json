@@ -1,0 +1,305 @@
+{
+ "answer_variants": [
+  " {a}",
+  "{a}",
+  " {A}",
+  "{A}"
+ ],
+ "based_on": {
+  "base_config": "configs/data/new_tasks.yaml",
+  "base_config_sha256": "2b22d89faf269caa33e36d406465dafd11209d48669be23d1af4fd83ba6051ca",
+  "overrides": {
+   "build": {
+    "out_dir": "data/built_llama",
+    "tokenizer_model": "configs/models/llama3_1_8b.yaml"
+   }
+  }
+ },
+ "counts": {
+  "after_copy_filter": 137,
+  "after_source_rules": 137,
+  "dev_pairs": 12,
+  "pairs": 46,
+  "source": 137,
+  "test_pairs": 34
+ },
+ "data_config_sha256": "eeb75ec562476b13f266436a1e65588a6a4e01c3c99c30f7f7ef6a6e7d74ae8c",
+ "excluded": [
+  {
+   "item": "fantastic",
+   "reason": "no compatible partner with 1 tokens"
+  },
+  {
+   "item": "beautiful",
+   "reason": "no compatible partner with 1 tokens"
+  },
+  {
+   "item": "incredible",
+   "reason": "no compatible partner with 1 tokens"
+  },
+  {
+   "item": "joyful",
+   "reason": "no compatible partner with 1 tokens"
+  },
+  {
+   "item": "wonderful",
+   "reason": "no compatible partner with 1 tokens"
+  },
+  {
+   "item": "brilliant",
+   "reason": "no compatible partner with 1 tokens"
+  },
+  {
+   "item": "entertaining",
+   "reason": "no compatible partner with 1 tokens"
+  },
+  {
+   "item": "great",
+   "reason": "no compatible partner with 1 tokens"
+  },
+  {
+   "item": "superb",
+   "reason": "no compatible partner with 1 tokens"
+  },
+  {
+   "item": "amazing",
+   "reason": "no compatible partner with 1 tokens"
+  },
+  {
+   "item": "perfect",
+   "reason": "no compatible partner with 1 tokens"
+  },
+  {
+   "item": "excellent",
+   "reason": "no compatible partner with 1 tokens"
+  },
+  {
+   "item": "exquisite",
+   "reason": "no compatible partner with 1 tokens"
+  },
+  {
+   "item": "fabulous",
+   "reason": "no compatible partner with 1 tokens"
+  },
+  {
+   "item": "gorgeous",
+   "reason": "no compatible partner with 1 tokens"
+  },
+  {
+   "item": "outstanding",
+   "reason": "no compatible partner with 1 tokens"
+  },
+  {
+   "item": "breathtaking",
+   "reason": "no compatible partner with 1 tokens"
+  },
+  {
+   "item": "phenomenal",
+   "reason": "no compatible partner with 1 tokens"
+  },
+  {
+   "item": "glorious",
+   "reason": "no compatible partner with 1 tokens"
+  },
+  {
+   "item": "fun",
+   "reason": "no compatible partner with 1 tokens"
+  },
+  {
+   "item": "fascinating",
+   "reason": "no compatible partner with 1 tokens"
+  },
+  {
+   "item": "forgettable",
+   "reason": "no compatible partner with 2 tokens"
+  },
+  {
+   "item": "unfunny",
+   "reason": "no compatible partner with 2 tokens"
+  },
+  {
+   "item": "atrocious",
+   "reason": "no compatible partner with 2 tokens"
+  },
+  {
+   "item": "inept",
+   "reason": "no compatible partner with 2 tokens"
+  },
+  {
+   "item": "bloated",
+   "reason": "no compatible partner with 2 tokens"
+  },
+  {
+   "item": "laughable",
+   "reason": "no compatible partner with 2 tokens"
+  },
+  {
+   "item": "horrid",
+   "reason": "no compatible partner with 2 tokens"
+  },
+  {
+   "item": "dreary",
+   "reason": "no compatible partner with 2 tokens"
+  },
+  {
+   "item": "tiresome",
+   "reason": "no compatible partner with 2 tokens"
+  },
+  {
+   "item": "mindless",
+   "reason": "no compatible partner with 2 tokens"
+  },
+  {
+   "item": "overlong",
+   "reason": "no compatible partner with 2 tokens"
+  },
+  {
+   "item": "lousy",
+   "reason": "no compatible partner with 2 tokens"
+  },
+  {
+   "item": "lifeless",
+   "reason": "no compatible partner with 2 tokens"
+  },
+  {
+   "item": "pretentious",
+   "reason": "no compatible partner with 2 tokens"
+  },
+  {
+   "item": "trite",
+   "reason": "no compatible partner with 2 tokens"
+  },
+  {
+   "item": "tasteless",
+   "reason": "no compatible partner with 2 tokens"
+  },
+  {
+   "item": "amateurish",
+   "reason": "no compatible partner with 2 tokens"
+  },
+  {
+   "item": "unwatchable",
+   "reason": "no compatible partner with 3 tokens"
+  },
+  {
+   "item": "abysmal",
+   "reason": "no compatible partner with 3 tokens"
+  },
+  {
+   "item": "ghastly",
+   "reason": "no compatible partner with 3 tokens"
+  },
+  {
+   "item": "incoherent",
+   "reason": "no compatible partner with 3 tokens"
+  },
+  {
+   "item": "insipid",
+   "reason": "no compatible partner with 3 tokens"
+  }
+ ],
+ "exemplar_answers": [
+  "positive",
+  "negative"
+ ],
+ "exemplars": [
+  {
+   "answer": "positive",
+   "concept": "engaging"
+  },
+  {
+   "answer": "negative",
+   "concept": "disappointing"
+  }
+ ],
+ "minimum": {
+  "dev_pairs": 12,
+  "met": false,
+  "test_pairs": 40
+ },
+ "n_records": 552,
+ "pairs": {
+  "dev": [
+   "enjoyable|messy",
+   "funny|cheap",
+   "inventive|pointless",
+   "marvelous|annoying",
+   "mediocre|charming",
+   "poor|inspiring",
+   "refreshing|ugly",
+   "satisfying|dreadful",
+   "splendid|incompetent",
+   "stunning|hollow",
+   "uplifting|bad",
+   "vapid|masterful"
+  ],
+  "test": [
+   "awesome|sloppy",
+   "captivating|unbearable",
+   "compelling|bland",
+   "dazzling|worthless",
+   "delightful|confusing",
+   "elegant|rotten",
+   "exciting|ridiculous",
+   "extraordinary|irritating",
+   "flawless|horrible",
+   "good|dull",
+   "gripping|boring",
+   "heartfelt|sluggish",
+   "hilarious|painful",
+   "impressive|lame",
+   "joyless|riveting",
+   "lovely|clumsy",
+   "magical|pathetic",
+   "magnificent|useless",
+   "memorable|awful",
+   "nice|miserable",
+   "pleasant|terrible",
+   "powerful|appalling",
+   "remarkable|repetitive",
+   "sensational|weak",
+   "shallow|clever",
+   "smart|dismal",
+   "stellar|stale",
+   "sublime|tedious",
+   "terrific|stupid",
+   "thrilling|awkward",
+   "touching|frustrating",
+   "tremendous|silly",
+   "uninspired|enchanting",
+   "witty|predictable"
+  ]
+ },
+ "pairs_by_token_count": {
+  "1": 43,
+  "2": 3
+ },
+ "records_file": "records.jsonl.gz",
+ "records_sha256": "a8d2a5c88d17f8f09536a3c6f75982fae449218a8b29eb118a327589dd9dd578",
+ "relation": "film_sentiment",
+ "role_in_design": "reserve",
+ "rules": "the declared adjectives (configs/data/sentiment_adjectives.yaml); a positive and a negative adjective of the same token count form a pair, seeded",
+ "sources": [
+  {
+   "file": "configs/data/sentiment_adjectives.yaml",
+   "license": "project-declared list",
+   "sha256": "f1d899d64cd04f6c8072dcfd8174fa388a90555c8fa1df889d658900fa4ace3d"
+  }
+ ],
+ "split_seed": 20260928,
+ "task": "R6",
+ "templates": {
+  "T1": "Review: The film was {c1}.\nSentiment: {a1}\n\nReview: The film was {c2}.\nSentiment: {a2}\n\nReview: The film was {q}.\nSentiment:",
+  "T2": "The film was {c1}, so the review is {a1}. The film was {c2}, so the review is {a2}. The film was {q}, so the review is",
+  "T3": "Q: The film was {c1}. Is the review positive or negative?\nA: {a1}\n\nQ: The film was {c2}. Is the review positive or negative?\nA: {a2}\n\nQ: The film was {q}. Is the review positive or negative?\nA:"
+ },
+ "tokenizer": {
+  "bos_token": "<|begin_of_text|>",
+  "bos_token_id": 128000,
+  "chat_template_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "class": "TokenizersBackend",
+  "name_or_path": "meta-llama/Llama-3.1-8B",
+  "vocab_sha256": "1d87c2f69748ba7bfd11ad4fd7c3917b7e849acb27e8e71d08b2f177061aa99f",
+  "vocab_size": 128256
+ }
+}

@@ -1,0 +1,62 @@
+seed: 20261016
+models:
+  gemma3_12b_it:
+    run: runs/selection-gemma-it-test
+    frozen: runs/selection-gemma-it-dev/frozen_protocol.json
+  llama3_1_8b:
+    run: runs/selection-llama-test
+    frozen: runs/selection-llama-dev/frozen_protocol.json
+  gemma3_12b_pt:
+    run: runs/selection-gemma-base-test
+    frozen: runs/selection-gemma-base-dev/frozen_protocol.json
+offtarget:
+  gemma3_12b_it:
+    run: runs/offtarget-gemma-it-test
+    frozen: runs/offtarget-gemma-it-dev/frozen_protocol.json
+  llama3_1_8b:
+    run: runs/offtarget-llama-test
+    frozen: runs/offtarget-llama-dev/frozen_protocol.json
+  gemma3_12b_pt:
+    run: runs/offtarget-gemma-base-test
+    frozen: runs/offtarget-gemma-base-dev/frozen_protocol.json
+sae_carried_threshold: 0.5
+signals:
+- ASSOC
+- NORM
+- LL-OUT
+- JL-OUT
+- ATP
+- PATCH
+- KAPPA
+- JSPACE
+- ORACLE
+offtarget_signals:
+- NORM
+- LL-OUT
+- JL-OUT
+- ATP
+- PATCH
+- ORACLE
+- NORM+KAPPA
+- NORM+JSPACE
+size:
+  signals:
+  - NORM
+  - LL-OUT
+  - JL-OUT
+  - ATP
+  - PATCH
+  - ORACLE
+  rho:
+  - 0.1
+  - 0.25
+  - 0.5
+  pairs:
+  - - JL-OUT
+    - LL-OUT
+  - - NORM
+    - JL-OUT
+  - - NORM
+    - ORACLE
+  - - JL-OUT
+    - ATP

@@ -1,0 +1,28 @@
+models:
+  gemma3_12b_it:
+    run: runs/selection-gemma-it-test
+    frozen: runs/selection-gemma-it-dev/frozen_protocol.json
+    matched_cells:
+    - 12/concept
+    - 24/concept
+    status: post hoc
+  llama3_1_8b:
+    run: runs/selection-llama-test
+    frozen: runs/selection-llama-dev/frozen_protocol.json
+    matched_cells:
+    - 8/concept
+    - 16/concept
+    status: post hoc
+reference: gemma3_12b_it
+matched_relations:
+- R2_element_symbol
+- R3_verb_past
+cross_model_k:
+- 4
+- 32
+descriptive:
+  x4:
+    run: runs/selection-sae-widths-test
+    frozen: runs/selection-sae-widths-dev/frozen_protocol.json
+holm_alpha: 0.05
+seed: 20261005

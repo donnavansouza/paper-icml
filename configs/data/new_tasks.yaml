@@ -1,0 +1,95 @@
+base: configs/data/relations.yaml
+tasks:
+- R5
+- R6
+overrides:
+  relations:
+    active:
+    - R5
+    reserve: R6
+    R5:
+      name: number_agreement
+      items:
+        kind: number_agreement
+        file: configs/data/agreement_nouns.yaml
+        license: project-declared list
+      keep: the declared nouns (configs/data/agreement_nouns.yaml); the singular and plural of one noun form a pair when both
+        have the same token count
+      answers:
+        singular: is
+        plural: are
+      answer_forms:
+        is:
+        - is
+        - was
+        are:
+        - are
+        - were
+      exemplar_answers:
+      - is
+      - are
+      pairing: same_lemma
+      templates:
+        T1: 'The {c1} over there {a1} new.
+
+          The {c2} over there {a2} new.
+
+          The {q} over there'
+        T2: In the shop, the {c1} on the left {a1} cheap, and the {c2} on the left {a2} cheap. In the shop, the {q} on the
+          left
+        T3: 'Q: Is or are? The {c1} over there ___ new.
+
+          A: {a1}
+
+
+          Q: Is or are? The {c2} over there ___ new.
+
+          A: {a2}
+
+
+          Q: Is or are? The {q} over there ___ new.
+
+          A:'
+    R6:
+      name: film_sentiment
+      items:
+        kind: word_classes
+        file: configs/data/sentiment_adjectives.yaml
+        license: project-declared list
+      keep: the declared adjectives (configs/data/sentiment_adjectives.yaml); a positive and a negative adjective of the same
+        token count form a pair, seeded
+      answers:
+        positive: positive
+        negative: negative
+      exemplar_answers:
+      - positive
+      - negative
+      templates:
+        T1: 'Review: The film was {c1}.
+
+          Sentiment: {a1}
+
+
+          Review: The film was {c2}.
+
+          Sentiment: {a2}
+
+
+          Review: The film was {q}.
+
+          Sentiment:'
+        T2: The film was {c1}, so the review is {a1}. The film was {c2}, so the review is {a2}. The film was {q}, so the review
+          is
+        T3: 'Q: The film was {c1}. Is the review positive or negative?
+
+          A: {a1}
+
+
+          Q: The film was {c2}. Is the review positive or negative?
+
+          A: {a2}
+
+
+          Q: The film was {q}. Is the review positive or negative?
+
+          A:'

@@ -1,0 +1,187 @@
+build:
+  out_dir: data/built
+  raw_dir: data/raw
+  tokenizer_model: configs/models/gemma3_12b_it.yaml
+  split_seed: 20260928
+sources:
+  countries:
+    url: https://raw.githubusercontent.com/mledoze/countries/c8015eebdd94c533358406b0d709f441389e1f2e/countries.json
+    sha256: 99b85dda36895c79caf72e191d035e4b9d82e811ee34f9ca15dfa67d7c561ba8
+    license: ODbL-1.0
+  elements:
+    url: https://pubchem.ncbi.nlm.nih.gov/rest/pug/periodictable/JSON
+    sha256: ff0f75976583b8a6493b18d0b42e83e1b68bd6e112b45d33578d98494ed5d321
+    license: public domain (NCBI PubChem)
+  irregular_verbs:
+    url: https://en.wiktionary.org/w/index.php?title=Appendix:English_irregular_verbs&oldid=91798533&action=raw
+    sha256: 2786deb5d89db65b2f72ff73d20cce10f214b7e8938748cfc87d5d25063f2fe4
+    license: CC-BY-SA-4.0
+  wikitext:
+    repo_id: Salesforce/wikitext
+    revision: b08601e04326c79dfdd32d625aee71d232d685c3
+    license: CC-BY-SA-3.0
+    files:
+      wikitext-103-raw-v1/validation-00000-of-00001.parquet: 204929b7ff9d6184953f867dedb860e40aa69c078fc1e54b3baaa8fb28511c4c
+relations:
+  dev_pairs: 12
+  min_test_pairs: 40
+  exemplars: 2
+  pairing: equal_token_count
+  exclude_copy_answers: true
+  answer_variants:
+  - ' {a}'
+  - '{a}'
+  - ' {A}'
+  - '{A}'
+  active:
+  - R1
+  - R2
+  - R3
+  reserve: R4
+  R1:
+    name: country_capital
+    source: countries
+    keep: independent and UN member, exactly one capital
+    templates:
+      T1: 'Country: {c1}
+
+        Capital: {a1}
+
+
+        Country: {c2}
+
+        Capital: {a2}
+
+
+        Country: {q}
+
+        Capital:'
+      T2: The capital of {c1} is {a1}. The capital of {c2} is {a2}. The capital of {q} is
+      T3: 'Q: What is the capital city of {c1}?
+
+        A: {a1}
+
+
+        Q: What is the capital city of {c2}?
+
+        A: {a2}
+
+
+        Q: What is the capital city of {q}?
+
+        A:'
+  R2:
+    name: element_symbol
+    source: elements
+    keep: all 118 elements; names lower-cased as in running text
+    concept_case: lower
+    templates:
+      T1: 'Element: {c1}
+
+        Symbol: {a1}
+
+
+        Element: {c2}
+
+        Symbol: {a2}
+
+
+        Element: {q}
+
+        Symbol:'
+      T2: The chemical symbol for {c1} is {a1}. The chemical symbol for {c2} is {a2}. The chemical symbol for {q} is
+      T3: 'Q: What is the chemical symbol of {c1}?
+
+        A: {a1}
+
+
+        Q: What is the chemical symbol of {c2}?
+
+        A: {a2}
+
+
+        Q: What is the chemical symbol of {q}?
+
+        A:'
+  R3:
+    name: verb_past
+    source: irregular_verbs
+    keep: headword and compound rows with exactly one simple-past form; no archaic (*) forms; no verb listed twice;
+      no modal verbs
+    modal_verbs:
+    - can
+    - could
+    - may
+    - might
+    - must
+    - shall
+    - should
+    - will
+    - would
+    - ought
+    - dare
+    - need
+    templates:
+      T1: 'Verb: {c1}
+
+        Past tense: {a1}
+
+
+        Verb: {c2}
+
+        Past tense: {a2}
+
+
+        Verb: {q}
+
+        Past tense:'
+      T2: The past tense of {c1} is {a1}. The past tense of {c2} is {a2}. The past tense of {q} is
+      T3: 'Q: What is the simple past tense of the verb {c1}?
+
+        A: {a1}
+
+
+        Q: What is the simple past tense of the verb {c2}?
+
+        A: {a2}
+
+
+        Q: What is the simple past tense of the verb {q}?
+
+        A:'
+  R4:
+    name: country_language
+    source: countries
+    keep: independent and UN member, exactly one listed language; pairs never share a language
+    templates:
+      T1: 'Country: {c1}
+
+        Language: {a1}
+
+
+        Country: {c2}
+
+        Language: {a2}
+
+
+        Country: {q}
+
+        Language:'
+      T2: The official language of {c1} is {a1}. The official language of {c2} is {a2}. The official language of {q} is
+      T3: 'Q: What language is officially spoken in {c1}?
+
+        A: {a1}
+
+
+        Q: What language is officially spoken in {c2}?
+
+        A: {a2}
+
+
+        Q: What language is officially spoken in {q}?
+
+        A:'
+neutral:
+  n_windows: 200
+  window_tokens: 128
+  source: wikitext

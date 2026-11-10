@@ -1,0 +1,30 @@
+seed: 20261029
+n_pairs: 40
+k_max: 8
+report_k:
+- 1
+- 2
+- 4
+- 8
+candidates_k: 32
+candidate_selectors:
+- ASSOC
+- NORM
+- LL-OUT
+- JL-OUT
+- ATP
+- PATCH
+- KAPPA
+- JSPACE
+- ORACLE
+parents:
+  gemma3_12b_it:
+    frozen: runs/selection-gemma-it-dev/frozen_protocol.json
+    dev_run: runs/selection-gemma-it-dev
+    test_run: runs/selection-gemma-it-test
+    cell: 12/concept
+  gemma3_12b_pt:
+    frozen: runs/selection-gemma-base-dev/frozen_protocol.json
+    dev_run: runs/selection-gemma-base-dev
+    test_run: runs/selection-gemma-base-test
+    cell: 12/concept

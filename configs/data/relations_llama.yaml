@@ -1,0 +1,11 @@
+base: configs/data/relations.yaml
+overrides:
+  build:
+    out_dir: data/built_llama
+    tokenizer_model: configs/models/llama3_1_8b.yaml
+tasks:
+- R1
+- R2
+- R3
+- R4
+- neutral

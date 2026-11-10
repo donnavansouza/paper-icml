@@ -1,0 +1,151 @@
+{
+ "answer_variants": [
+  " {a}",
+  "{a}",
+  " {A}",
+  "{A}"
+ ],
+ "based_on": {
+  "base_config": "configs/data/relations.yaml",
+  "base_config_sha256": "3224a526920981a0feb9deba63e473b7b82cf3042b209de544234e991ba1e764",
+  "overrides": {
+   "build": {
+    "out_dir": "data/built_llama",
+    "tokenizer_model": "configs/models/llama3_1_8b.yaml"
+   }
+  }
+ },
+ "counts": {
+  "after_copy_filter": 118,
+  "after_source_rules": 118,
+  "dev_pairs": 12,
+  "pairs": 57,
+  "source": 118,
+  "test_pairs": 45
+ },
+ "data_config_sha256": "11b3c91adfd4afe4cd4fc952e2d4d3be6784a37415fcfb196e0a98a68bdb2636",
+ "excluded": [
+  {
+   "item": "dubnium",
+   "reason": "no compatible partner with 3 tokens"
+  },
+  {
+   "item": "molybdenum",
+   "reason": "no compatible partner with 5 tokens"
+  }
+ ],
+ "exemplars": [
+  {
+   "answer": "Fr",
+   "concept": "francium"
+  },
+  {
+   "answer": "Sg",
+   "concept": "seaborgium"
+  }
+ ],
+ "minimum": {
+  "dev_pairs": 12,
+  "met": true,
+  "test_pairs": 40
+ },
+ "n_records": 684,
+ "pairs": {
+  "dev": [
+   "aluminum|selenium",
+   "arsenic|vanadium",
+   "bismuth|rubidium",
+   "chlorine|potassium",
+   "darmstadtium|strontium",
+   "erbium|samarium",
+   "gadolinium|moscovium",
+   "gold|nickel",
+   "indium|krypton",
+   "plutonium|thorium",
+   "tungsten|fluorine",
+   "uranium|lithium"
+  ],
+  "test": [
+   "americium|tantalum",
+   "astatine|californium",
+   "beryllium|meitnerium",
+   "bohrium|actinium",
+   "boron|osmium",
+   "calcium|sulfur",
+   "cerium|phosphorus",
+   "cesium|antimony",
+   "cobalt|bromine",
+   "curium|cadmium",
+   "europium|rhodium",
+   "flerovium|copernicium",
+   "gallium|iodine",
+   "germanium|polonium",
+   "hassium|barium",
+   "helium|titanium",
+   "holmium|radon",
+   "hydrogen|magnesium",
+   "lanthanum|berkelium",
+   "lawrencium|thallium",
+   "lutetium|zirconium",
+   "mendelevium|roentgenium",
+   "mercury|carbon",
+   "neodymium|oganesson",
+   "neon|chromium",
+   "niobium|hafnium",
+   "nitrogen|manganese",
+   "nobelium|iridium",
+   "oxygen|silicon",
+   "palladium|fermium",
+   "praseodymium|neptunium",
+   "protactinium|thulium",
+   "radium|argon",
+   "rhenium|technetium",
+   "ruthenium|terbium",
+   "rutherfordium|einsteinium",
+   "scandium|xenon",
+   "silver|iron",
+   "sodium|platinum",
+   "tellurium|nihonium",
+   "tennessine|promethium",
+   "tin|lead",
+   "ytterbium|dysprosium",
+   "yttrium|livermorium",
+   "zinc|copper"
+  ]
+ },
+ "pairs_by_token_count": {
+  "1": 15,
+  "2": 20,
+  "3": 17,
+  "4": 5
+ },
+ "records_file": "records.jsonl.gz",
+ "records_sha256": "bcc0069cc2529499670082979a770e2ebcf070bc424123af74fe691a86375e56",
+ "relation": "element_symbol",
+ "role_in_design": "active",
+ "rules": "all 118 elements; names lower-cased as in running text",
+ "sources": [
+  {
+   "file": "elements",
+   "license": "public domain (NCBI PubChem)",
+   "origin": "https://pubchem.ncbi.nlm.nih.gov/rest/pug/periodictable/JSON",
+   "sha256": "ff0f75976583b8a6493b18d0b42e83e1b68bd6e112b45d33578d98494ed5d321"
+  }
+ ],
+ "split_seed": 20260928,
+ "task": "R2",
+ "templates": {
+  "T1": "Element: {c1}\nSymbol: {a1}\n\nElement: {c2}\nSymbol: {a2}\n\nElement: {q}\nSymbol:",
+  "T2": "The chemical symbol for {c1} is {a1}. The chemical symbol for {c2} is {a2}. The chemical symbol for {q} is",
+  "T3": "Q: What is the chemical symbol of {c1}?\nA: {a1}\n\nQ: What is the chemical symbol of {c2}?\nA: {a2}\n\nQ: What is the chemical symbol of {q}?\nA:"
+ },
+ "tokenizer": {
+  "bos_token": "<|begin_of_text|>",
+  "bos_token_id": 128000,
+  "chat_template_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "class": "TokenizersBackend",
+  "name_or_path": "meta-llama/Llama-3.1-8B",
+  "vocab_sha256": "1d87c2f69748ba7bfd11ad4fd7c3917b7e849acb27e8e71d08b2f177061aa99f",
+  "vocab_size": 128256
+ }
+}

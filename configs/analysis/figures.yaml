@@ -1,0 +1,83 @@
+seed: 20261005
+holm_alpha: 0.05
+models:
+  gemma3_12b_it:
+    label: Gemma 3 12B-IT
+    run: runs/selection-gemma-it-test
+    frozen: runs/selection-gemma-it-dev/frozen_protocol.json
+  llama3_1_8b:
+    label: Llama 3.1 8B base
+    run: runs/selection-llama-test
+    frozen: runs/selection-llama-dev/frozen_protocol.json
+  gemma3_12b_pt:
+    label: Gemma 3 12B base
+    run: runs/selection-gemma-base-test
+    frozen: runs/selection-gemma-base-dev/frozen_protocol.json
+figures:
+  fk:
+    models:
+    - gemma3_12b_it
+    - llama3_1_8b
+    - gemma3_12b_pt
+  dissociation:
+    models:
+    - gemma3_12b_it
+    - llama3_1_8b
+    - gemma3_12b_pt
+    signals:
+    - ASSOC
+    - NORM
+    - LL-OUT
+    - JL-OUT
+    - ATP
+    - ATP@in
+    - PATCH
+    - KAPPA
+    - JSPACE
+    - ORACLE
+  superadditivity:
+    models:
+    - gemma3_12b_it
+    - gemma3_12b_pt
+    cell: 12/concept
+    k: 32
+    selectors:
+    - ORACLE
+    - NORM
+    - JL-OUT
+  swap:
+    report: analysis/sae-swap/report.json
+    k: 32
+    cells:
+      it:
+        it: it_weights_it_sae
+        pt: it_weights_pt_sae
+      pt:
+        it: pt_weights_it_sae
+        pt: pt_weights_pt_sae
+  replication:
+    sesoi: 0.05
+    reports:
+      Gemma-IT: runs/selection-new-tasks-gemma-it-test/report.json
+      Gemma base: runs/selection-new-tasks-gemma-base-test/report.json
+      Llama: runs/selection-new-tasks-llama-test/report.json
+  decomposition:
+    report: analysis/decomposition/report.json
+    pair: ATP - JL-OUT
+    runs:
+      gemma3_12b_it_r1r3: Gemma-IT, R1–R3
+      gemma3_12b_pt_r1r3: Gemma base, R1–R3
+      llama3_1_8b_r1r3: Llama, R2–R4
+      gemma3_12b_it_r5r6: Gemma-IT, R5–R6
+      gemma3_12b_pt_r5r6: Gemma base, R5–R6
+      llama3_1_8b_r5: Llama, R5
+  jlens:
+    sesoi: 0.05
+    factual:
+      Gemma-IT: runs/selection-gemma-it-test/report.json
+      Gemma base: runs/selection-gemma-base-test/report.json
+      Llama: runs/selection-llama-test/report.json
+    new_tasks:
+      Gemma-IT: runs/selection-new-tasks-gemma-it-test/report.json
+      Gemma base: runs/selection-new-tasks-gemma-base-test/report.json
+      Llama: runs/selection-new-tasks-llama-test/report.json

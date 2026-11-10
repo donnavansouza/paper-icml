@@ -1,0 +1,1267 @@
+{
+ "answer_variants": [
+  " {a}",
+  "{a}",
+  " {A}",
+  "{A}"
+ ],
+ "counts": {
+  "after_copy_filter": 149,
+  "after_source_rules": 281,
+  "dev_pairs": 12,
+  "pairs": 73,
+  "source": 428,
+  "test_pairs": 61
+ },
+ "data_config_sha256": "3224a526920981a0feb9deba63e473b7b82cf3042b209de544234e991ba1e764",
+ "excluded": [
+  {
+   "item": "be",
+   "reason": "simple past 'was/were<!--' is not a single form"
+  },
+  {
+   "item": "bear",
+   "reason": "simple past 'bore/*bare' is not a single form"
+  },
+  {
+   "item": "*misbear",
+   "reason": "archaic or rare form (*)"
+  },
+  {
+   "item": "bend",
+   "reason": "simple past 'bent/bended' is not a single form"
+  },
+  {
+   "item": "beseech",
+   "reason": "simple past 'besought/beseeched' is not a single form"
+  },
+  {
+   "item": "bet",
+   "reason": "simple past 'bet/betted' is not a single form"
+  },
+  {
+   "item": "bid",
+   "reason": "listed more than once (different senses)"
+  },
+  {
+   "item": "bid",
+   "reason": "listed more than once (different senses)"
+  },
+  {
+   "item": "forbid",
+   "reason": "simple past 'forbad/forbade/forbid' is not a single form"
+  },
+  {
+   "item": "bide",
+   "reason": "simple past 'bided/bode' is not a single form"
+  },
+  {
+   "item": "abide",
+   "reason": "simple past 'abided/abode' is not a single form"
+  },
+  {
+   "item": "bless",
+   "reason": "simple past 'blessed/blest' is not a single form"
+  },
+  {
+   "item": "burn",
+   "reason": "simple past 'burned/burnt' is not a single form"
+  },
+  {
+   "item": "burst",
+   "reason": "simple past 'burst/bursted/*brast' is not a single form"
+  },
+  {
+   "item": "bust",
+   "reason": "simple past 'bust/busted' is not a single form"
+  },
+  {
+   "item": "can (aux. only)",
+   "reason": "not a single word"
+  },
+  {
+   "item": "chide",
+   "reason": "simple past 'chid/chidded/chode' is not a single form"
+  },
+  {
+   "item": "cleave",
+   "reason": "listed more than once (different senses)"
+  },
+  {
+   "item": "cleave",
+   "reason": "listed more than once (different senses)"
+  },
+  {
+   "item": "clothe",
+   "reason": "simple past 'clothed/clad' is not a single form"
+  },
+  {
+   "item": "unclothe",
+   "reason": "simple past 'unclothed/unclad' is not a single form"
+  },
+  {
+   "item": "creep",
+   "reason": "simple past 'crept/creeped' is not a single form"
+  },
+  {
+   "item": "crow",
+   "reason": "simple past 'crew/crowed' is not a single form"
+  },
+  {
+   "item": "dare",
+   "reason": "modal verb"
+  },
+  {
+   "item": "dive",
+   "reason": "simple past 'dived/dove' is not a single form"
+  },
+  {
+   "item": "drag",
+   "reason": "simple past 'drug/dragged' is not a single form"
+  },
+  {
+   "item": "dream",
+   "reason": "simple past 'dreamed/dreamt' is not a single form"
+  },
+  {
+   "item": "dress",
+   "reason": "simple past 'dressed/*drest' is not a single form"
+  },
+  {
+   "item": "overdress",
+   "reason": "simple past 'overdressed/overdrest' is not a single form"
+  },
+  {
+   "item": "underdress",
+   "reason": "simple past 'underdressed/underdrest' is not a single form"
+  },
+  {
+   "item": "undress",
+   "reason": "simple past 'undressed/undrest' is not a single form"
+  },
+  {
+   "item": "drink",
+   "reason": "simple past 'drank/drunk' is not a single form"
+  },
+  {
+   "item": "drive",
+   "reason": "simple past 'drove/*drave' is not a single form"
+  },
+  {
+   "item": "dwell",
+   "reason": "simple past 'dwelt/dwelled' is not a single form"
+  },
+  {
+   "item": "fit",
+   "reason": "simple past 'fit/fitted' is not a single form"
+  },
+  {
+   "item": "freeze",
+   "reason": "simple past 'froze/*frore' is not a single form"
+  },
+  {
+   "item": "beget",
+   "reason": "simple past 'begot/*begat' is not a single form"
+  },
+  {
+   "item": "gild",
+   "reason": "simple past 'gilt/gilded' is not a single form"
+  },
+  {
+   "item": "gird",
+   "reason": "simple past 'girt/girded' is not a single form"
+  },
+  {
+   "item": "undergird",
+   "reason": "simple past 'undergirt/undergirded' is not a single form"
+  },
+  {
+   "item": "gnaw",
+   "reason": "simple past 'gnawed/*gnew' is not a single form"
+  },
+  {
+   "item": "grave",
+   "reason": "simple past 'grove/graved' is not a single form"
+  },
+  {
+   "item": "grind",
+   "reason": "simple past 'ground/grinded' is not a single form"
+  },
+  {
+   "item": "hang",
+   "reason": "simple past 'hung/hanged' is not a single form"
+  },
+  {
+   "item": "overhang",
+   "reason": "simple past 'overhung/overhanged' is not a single form"
+  },
+  {
+   "item": "heave",
+   "reason": "simple past 'heaved/hove' is not a single form"
+  },
+  {
+   "item": "hew",
+   "reason": "simple past 'hew/hewed' is not a single form"
+  },
+  {
+   "item": "ken",
+   "reason": "simple past 'kenned/kent' is not a single form"
+  },
+  {
+   "item": "misken",
+   "reason": "simple past 'miskenned/miskent' is not a single form"
+  },
+  {
+   "item": "kneel",
+   "reason": "simple past 'knelt/kneeled' is not a single form"
+  },
+  {
+   "item": "knit",
+   "reason": "simple past 'knit/knitted' is not a single form"
+  },
+  {
+   "item": "latch",
+   "reason": "simple past 'latched/*laught' is not a single form"
+  },
+  {
+   "item": "relatch",
+   "reason": "simple past 'relatched/*relaught' is not a single form"
+  },
+  {
+   "item": "unlatch",
+   "reason": "simple past 'unlatched/*unlaught' is not a single form"
+  },
+  {
+   "item": "lean",
+   "reason": "simple past 'leaned/leant' is not a single form"
+  },
+  {
+   "item": "leap",
+   "reason": "simple past 'leaped/leapt/*lope' is not a single form"
+  },
+  {
+   "item": "learn",
+   "reason": "simple past 'learned/learnt' is not a single form"
+  },
+  {
+   "item": "mislearn",
+   "reason": "simple past 'mislearned/mislearnt' is not a single form"
+  },
+  {
+   "item": "*forlend",
+   "reason": "archaic or rare form (*)"
+  },
+  {
+   "item": "let",
+   "reason": "simple past 'let/*leet' is not a single form"
+  },
+  {
+   "item": "light",
+   "reason": "simple past 'lit/lighted' is not a single form"
+  },
+  {
+   "item": "alight",
+   "reason": "simple past 'alit/alighted' is not a single form"
+  },
+  {
+   "item": "may",
+   "reason": "modal verb"
+  },
+  {
+   "item": "melt",
+   "reason": "simple past 'melted/*molt' is not a single form"
+  },
+  {
+   "item": "must",
+   "reason": "modal verb"
+  },
+  {
+   "item": "nim",
+   "reason": "simple past 'nam/nimmed' is not a single form"
+  },
+  {
+   "item": "benim",
+   "reason": "simple past 'benam/benimmed' is not a single form"
+  },
+  {
+   "item": "pen",
+   "reason": "simple past 'penned/*pent' is not a single form"
+  },
+  {
+   "item": "pet",
+   "reason": "simple past 'pet/petted' is not a single form"
+  },
+  {
+   "item": "plead",
+   "reason": "simple past 'pleaded/pled' is not a single form"
+  },
+  {
+   "item": "output",
+   "reason": "simple past 'output/outputted' is not a single form"
+  },
+  {
+   "item": "bereave",
+   "reason": "simple past 'bereaved/bereft' is not a single form"
+  },
+  {
+   "item": "rid",
+   "reason": "simple past 'rid/ridded' is not a single form"
+  },
+  {
+   "item": "rive",
+   "reason": "simple past 'rived/rove' is not a single form"
+  },
+  {
+   "item": "*forsay",
+   "reason": "archaic or rare form (*)"
+  },
+  {
+   "item": "*gainsay",
+   "reason": "archaic or rare form (*)"
+  },
+  {
+   "item": "*naysay",
+   "reason": "archaic or rare form (*)"
+  },
+  {
+   "item": "*withsay",
+   "reason": "archaic or rare form (*)"
+  },
+  {
+   "item": "*besee",
+   "reason": "archaic or rare form (*)"
+  },
+  {
+   "item": "seethe",
+   "reason": "simple past 'seethed/*sod' is not a single form"
+  },
+  {
+   "item": "*withset",
+   "reason": "archaic or rare form (*)"
+  },
+  {
+   "item": "shall",
+   "reason": "modal verb"
+  },
+  {
+   "item": "shape",
+   "reason": "simple past 'shaped/*shope' is not a single form"
+  },
+  {
+   "item": "shave",
+   "reason": "simple past 'shove/shaved' is not a single form"
+  },
+  {
+   "item": "shear",
+   "reason": "simple past 'shore/sheared' is not a single form"
+  },
+  {
+   "item": "shed",
+   "reason": "simple past 'shed/shedded' is not a single form"
+  },
+  {
+   "item": "shine",
+   "reason": "simple past 'shined/shone' is not a single form"
+  },
+  {
+   "item": "*beshine",
+   "reason": "archaic or rare form (*)"
+  },
+  {
+   "item": "outshine",
+   "reason": "simple past 'outshined/outshone' is not a single form"
+  },
+  {
+   "item": "overshine",
+   "reason": "simple past 'overshined/overshone' is not a single form"
+  },
+  {
+   "item": "shit",
+   "reason": "simple past 'shit/shat/shitted' is not a single form"
+  },
+  {
+   "item": "shite",
+   "reason": "simple past 'shit/shat' is not a single form"
+  },
+  {
+   "item": "shoe",
+   "reason": "simple past 'shoed/shod' is not a single form"
+  },
+  {
+   "item": "show",
+   "reason": "simple past 'showed/shew' is not a single form"
+  },
+  {
+   "item": "shred",
+   "reason": "simple past 'shredded/shred' is not a single form"
+  },
+  {
+   "item": "shrink",
+   "reason": "simple past 'shrank/shrunk' is not a single form"
+  },
+  {
+   "item": "sink",
+   "reason": "simple past 'sank/sunk' is not a single form"
+  },
+  {
+   "item": "slay",
+   "reason": "simple past 'slew/slayed' is not a single form"
+  },
+  {
+   "item": "sling",
+   "reason": "simple past 'slang/slung' is not a single form"
+  },
+  {
+   "item": "slip",
+   "reason": "simple past 'slipped/*slipt' is not a single form"
+  },
+  {
+   "item": "overslip",
+   "reason": "simple past 'overslipped/overslipt' is not a single form"
+  },
+  {
+   "item": "smell",
+   "reason": "simple past 'smelled/smelt' is not a single form"
+  },
+  {
+   "item": "smite",
+   "reason": "simple past 'smote/smit' is not a single form"
+  },
+  {
+   "item": "sneak",
+   "reason": "simple past 'sneaked/snuck' is not a single form"
+  },
+  {
+   "item": "sow",
+   "reason": "simple past 'sowed/sew' is not a single form"
+  },
+  {
+   "item": "speak",
+   "reason": "simple past 'spoke/*spake' is not a single form"
+  },
+  {
+   "item": "*bespeak",
+   "reason": "archaic or rare form (*)"
+  },
+  {
+   "item": "*forspeak",
+   "reason": "archaic or rare form (*)"
+  },
+  {
+   "item": "speed",
+   "reason": "simple past 'sped/speeded' is not a single form"
+  },
+  {
+   "item": "spell",
+   "reason": "simple past 'spelled/spelt' is not a single form"
+  },
+  {
+   "item": "misspell",
+   "reason": "simple past 'misspelled/misspelt' is not a single form"
+  },
+  {
+   "item": "*forspend",
+   "reason": "archaic or rare form (*)"
+  },
+  {
+   "item": "spill",
+   "reason": "simple past 'spilled/spilt' is not a single form"
+  },
+  {
+   "item": "overspill",
+   "reason": "simple past 'overspilled/overspilt' is not a single form"
+  },
+  {
+   "item": "spin",
+   "reason": "simple past 'span/spun' is not a single form"
+  },
+  {
+   "item": "spit",
+   "reason": "simple past 'spit/spat' is not a single form"
+  },
+  {
+   "item": "spoil",
+   "reason": "simple past 'spoiled/spoilt' is not a single form"
+  },
+  {
+   "item": "*bespread",
+   "reason": "archaic or rare form (*)"
+  },
+  {
+   "item": "spring",
+   "reason": "simple past 'sprang/sprung' is not a single form"
+  },
+  {
+   "item": "stave",
+   "reason": "simple past 'staved/stove' is not a single form"
+  },
+  {
+   "item": "stay",
+   "reason": "simple past 'stayed/staid' is not a single form"
+  },
+  {
+   "item": "sting",
+   "reason": "simple past 'stung/stang' is not a single form"
+  },
+  {
+   "item": "stink",
+   "reason": "simple past 'stank/stunk' is not a single form"
+  },
+  {
+   "item": "strew",
+   "reason": "simple past 'strew/strewed' is not a single form"
+  },
+  {
+   "item": "stride",
+   "reason": "simple past 'strode/strided' is not a single form"
+  },
+  {
+   "item": "string",
+   "reason": "simple past 'strang/strung' is not a single form"
+  },
+  {
+   "item": "strive",
+   "reason": "simple past 'strove/strived' is not a single form"
+  },
+  {
+   "item": "*strow",
+   "reason": "archaic or rare form (*)"
+  },
+  {
+   "item": "sweat",
+   "reason": "simple past 'sweat/sweated' is not a single form"
+  },
+  {
+   "item": "swell",
+   "reason": "simple past 'swelled/swoll' is not a single form"
+  },
+  {
+   "item": "swing",
+   "reason": "simple past 'swang/swung' is not a single form"
+  },
+  {
+   "item": "thrive",
+   "reason": "simple past 'thrived/throve' is not a single form"
+  },
+  {
+   "item": "thrust",
+   "reason": "simple past 'thrust/thrusted' is not a single form"
+  },
+  {
+   "item": "wake",
+   "reason": "simple past 'woke/waked' is not a single form"
+  },
+  {
+   "item": "awake",
+   "reason": "simple past 'awoke/awaked' is not a single form"
+  },
+  {
+   "item": "weave",
+   "reason": "simple past 'weaved/wove' is not a single form"
+  },
+  {
+   "item": "wed",
+   "reason": "simple past 'wed/wedded' is not a single form"
+  },
+  {
+   "item": "wend",
+   "reason": "simple past 'wended/went' is not a single form"
+  },
+  {
+   "item": "wet",
+   "reason": "simple past 'wet/wetted' is not a single form"
+  },
+  {
+   "item": "whet",
+   "reason": "simple past 'whet/whetted' is not a single form"
+  },
+  {
+   "item": "will",
+   "reason": "modal verb"
+  },
+  {
+   "item": "bewit",
+   "reason": "simple past 'bewitted/*bewist' is not a single form"
+  },
+  {
+   "item": "work",
+   "reason": "simple past 'worked/*wrought' is not a single form"
+  },
+  {
+   "item": "wreak",
+   "reason": "simple past 'wreaked/wrought/*wroke' is not a single form"
+  },
+  {
+   "item": "wring",
+   "reason": "simple past 'wrang/wrung' is not a single form"
+  },
+  {
+   "item": "write",
+   "reason": "simple past 'wrote/*writ' is not a single form"
+  },
+  {
+   "item": "writhe",
+   "reason": "simple past 'writhed/*wrothe' is not a single form"
+  },
+  {
+   "item": "overbear",
+   "reason": "answer's first token equals the concept's first token"
+  },
+  {
+   "item": "underbear",
+   "reason": "answer's first token equals the concept's first token"
+  },
+  {
+   "item": "beat",
+   "reason": "answer's first token equals the concept's first token"
+  },
+  {
+   "item": "browbeat",
+   "reason": "answer's first token equals the concept's first token"
+  },
+  {
+   "item": "overbend",
+   "reason": "answer's first token equals the concept's first token"
+  },
+  {
+   "item": "unbend",
+   "reason": "answer's first token equals the concept's first token"
+  },
+  {
+   "item": "outbid",
+   "reason": "answer's first token equals the concept's first token"
+  },
+  {
+   "item": "overbid",
+   "reason": "answer's first token equals the concept's first token"
+  },
+  {
+   "item": "underbid",
+   "reason": "answer's first token equals the concept's first token"
+  },
+  {
+   "item": "underbind",
+   "reason": "answer's first token equals the concept's first token"
+  },
+  {
+   "item": "overblow",
+   "reason": "answer's first token equals the concept's first token"
+  },
+  {
+   "item": "inbreed",
+   "reason": "answer's first token equals the concept's first token"
+  },
+  {
+   "item": "interbreed",
+   "reason": "answer's first token equals the concept's first token"
+  },
+  {
+   "item": "overbreed",
+   "reason": "answer's first token equals the concept's first token"
+  },
+  {
+   "item": "overbuild",
+   "reason": "answer's first token equals the concept's first token"
+  },
+  {
+   "item": "overbuy",
+   "reason": "answer's first token equals the concept's first token"
+  },
+  {
+   "item": "underbuy",
+   "reason": "answer's first token equals the concept's first token"
+  },
+  {
+   "item": "cast",
+   "reason": "answer's first token equals the concept's first token"
+  },
+  {
+   "item": "broadcast",
+   "reason": "answer's first token equals the concept's first token"
+  },
+  {
+   "item": "forecast",
+   "reason": "answer's first token equals the concept's first token"
+  },
+  {
+   "item": "miscast",
+   "reason": "answer's first token equals the concept's first token"
+  },
+  {
+   "item": "overcast",
+   "reason": "answer's first token equals the concept's first token"
+  },
+  {
+   "item": "podcast",
+   "reason": "answer's first token equals the concept's first token"
+  },
+  {
+   "item": "recast",
+   "reason": "answer's first token equals the concept's first token"
+  },
+  {
+   "item": "simulcast",
+   "reason": "answer's first token equals the concept's first token"
+  },
+  {
+   "item": "undercast",
+   "reason": "answer's first token equals the concept's first token"
+  },
+  {
+   "item": "webcast",
+   "reason": "answer's first token equals the concept's first token"
+  },
+  {
+   "item": "misbecome",
+   "reason": "answer's first token equals the concept's first token"
+  },
+  {
+   "item": "cost",
+   "reason": "answer's first token equals the concept's first token"
+  },
+  {
+   "item": "cut",
+   "reason": "answer's first token equals the concept's first token"
+  },
+  {
+   "item": "crosscut",
+   "reason": "answer's first token equals the concept's first token"
+  },
+  {
+   "item": "intercut",
+   "reason": "answer's first token equals the concept's first token"
+  },
+  {
+   "item": "undercut",
+   "reason": "answer's first token equals the concept's first token"
+  },
+  {
+   "item": "misdeal",
+   "reason": "answer's first token equals the concept's first token"
+  },
+  {
+   "item": "underdig",
+   "reason": "answer's first token equals the concept's first token"
+  },
+  {
+   "item": "misdo",
+   "reason": "answer's first token equals the concept's first token"
+  },
+  {
+   "item": "outdo",
+   "reason": "answer's first token equals the concept's first token"
+  },
+  {
+   "item": "overdo",
+   "reason": "answer's first token equals the concept's first token"
+  },
+  {
+   "item": "underdo",
+   "reason": "answer's first token equals the concept's first token"
+  },
+  {
+   "item": "underdraw",
+   "reason": "answer's first token equals the concept's first token"
+  },
+  {
+   "item": "overdrink",
+   "reason": "answer's first token equals the concept's first token"
+  },
+  {
+   "item": "overeat",
+   "reason": "answer's first token equals the concept's first token"
+  },
+  {
+   "item": "breastfeed",
+   "reason": "answer's first token equals the concept's first token"
+  },
+  {
+   "item": "misfeed",
+   "reason": "answer's first token equals the concept's first token"
+  },
+  {
+   "item": "overfeed",
+   "reason": "answer's first token equals the concept's first token"
+  },
+  {
+   "item": "underfeed",
+   "reason": "answer's first token equals the concept's first token"
+  },
+  {
+   "item": "overfly",
+   "reason": "answer's first token equals the concept's first token"
+  },
+  {
+   "item": "misbeget",
+   "reason": "answer's first token equals the concept's first token"
+  },
+  {
+   "item": "misget",
+   "reason": "answer's first token equals the concept's first token"
+  },
+  {
+   "item": "underget",
+   "reason": "answer's first token equals the concept's first token"
+  },
+  {
+   "item": "misgive",
+   "reason": "answer's first token equals the concept's first token"
+  },
+  {
+   "item": "outgrow",
+   "reason": "answer's first token equals the concept's first token"
+  },
+  {
+   "item": "overgrow",
+   "reason": "answer's first token equals the concept's first token"
+  },
+  {
+   "item": "regrow",
+   "reason": "answer's first token equals the concept's first token"
+  },
+  {
+   "item": "undergrow",
+   "reason": "answer's first token equals the concept's first token"
+  },
+  {
+   "item": "underhang",
+   "reason": "answer's first token equals the concept's first token"
+  },
+  {
+   "item": "mishear",
+   "reason": "answer's first token equals the concept's first token"
+  },
+  {
+   "item": "underhew",
+   "reason": "answer's first token equals the concept's first token"
+  },
+  {
+   "item": "hit",
+   "reason": "answer's first token equals the concept's first token"
+  },
+  {
+   "item": "mishit",
+   "reason": "answer's first token equals the concept's first token"
+  },
+  {
+   "item": "hurt",
+   "reason": "answer's first token equals the concept's first token"
+  },
+  {
+   "item": "miskeep",
+   "reason": "answer's first token equals the concept's first token"
+  },
+  {
+   "item": "foreknow",
+   "reason": "answer's first token equals the concept's first token"
+  },
+  {
+   "item": "misknow",
+   "reason": "answer's first token equals the concept's first token"
+  },
+  {
+   "item": "forelay",
+   "reason": "answer's first token equals the concept's first token"
+  },
+  {
+   "item": "forlay",
+   "reason": "answer's first token equals the concept's first token"
+  },
+  {
+   "item": "mislay",
+   "reason": "answer's first token equals the concept's first token"
+  },
+  {
+   "item": "underlay",
+   "reason": "answer's first token equals the concept's first token"
+  },
+  {
+   "item": "waylay",
+   "reason": "answer's first token equals the concept's first token"
+  },
+  {
+   "item": "forleave",
+   "reason": "answer's first token equals the concept's first token"
+  },
+  {
+   "item": "forlet",
+   "reason": "answer's first token equals the concept's first token"
+  },
+  {
+   "item": "sublet",
+   "reason": "answer's first token equals the concept's first token"
+  },
+  {
+   "item": "underlet",
+   "reason": "answer's first token equals the concept's first token"
+  },
+  {
+   "item": "overpay",
+   "reason": "answer's first token equals the concept's first token"
+  },
+  {
+   "item": "underpay",
+   "reason": "answer's first token equals the concept's first token"
+  },
+  {
+   "item": "put",
+   "reason": "answer's first token equals the concept's first token"
+  },
+  {
+   "item": "input",
+   "reason": "answer's first token equals the concept's first token"
+  },
+  {
+   "item": "quit",
+   "reason": "answer's first token equals the concept's first token"
+  },
+  {
+   "item": "read",
+   "reason": "answer's first token equals the concept's first token"
+  },
+  {
+   "item": "lipread",
+   "reason": "answer's first token equals the concept's first token"
+  },
+  {
+   "item": "misread",
+   "reason": "answer's first token equals the concept's first token"
+  },
+  {
+   "item": "proofread",
+   "reason": "answer's first token equals the concept's first token"
+  },
+  {
+   "item": "reread",
+   "reason": "answer's first token equals the concept's first token"
+  },
+  {
+   "item": "forerun",
+   "reason": "answer's first token equals the concept's first token"
+  },
+  {
+   "item": "outrun",
+   "reason": "answer's first token equals the concept's first token"
+  },
+  {
+   "item": "underrun",
+   "reason": "answer's first token equals the concept's first token"
+  },
+  {
+   "item": "saw",
+   "reason": "answer's first token equals the concept's first token"
+  },
+  {
+   "item": "missay",
+   "reason": "answer's first token equals the concept's first token"
+  },
+  {
+   "item": "outsell",
+   "reason": "answer's first token equals the concept's first token"
+  },
+  {
+   "item": "oversell",
+   "reason": "answer's first token equals the concept's first token"
+  },
+  {
+   "item": "missend",
+   "reason": "answer's first token equals the concept's first token"
+  },
+  {
+   "item": "set",
+   "reason": "answer's first token equals the concept's first token"
+  },
+  {
+   "item": "beset",
+   "reason": "answer's first token equals the concept's first token"
+  },
+  {
+   "item": "inset",
+   "reason": "answer's first token equals the concept's first token"
+  },
+  {
+   "item": "misset",
+   "reason": "answer's first token equals the concept's first token"
+  },
+  {
+   "item": "offset",
+   "reason": "answer's first token equals the concept's first token"
+  },
+  {
+   "item": "overset",
+   "reason": "answer's first token equals the concept's first token"
+  },
+  {
+   "item": "preset",
+   "reason": "answer's first token equals the concept's first token"
+  },
+  {
+   "item": "reset",
+   "reason": "answer's first token equals the concept's first token"
+  },
+  {
+   "item": "upset",
+   "reason": "answer's first token equals the concept's first token"
+  },
+  {
+   "item": "oversew",
+   "reason": "answer's first token equals the concept's first token"
+  },
+  {
+   "item": "overshake",
+   "reason": "answer's first token equals the concept's first token"
+  },
+  {
+   "item": "misshape",
+   "reason": "answer's first token equals the concept's first token"
+  },
+  {
+   "item": "reshoot",
+   "reason": "answer's first token equals the concept's first token"
+  },
+  {
+   "item": "undershoot",
+   "reason": "answer's first token equals the concept's first token"
+  },
+  {
+   "item": "shrive",
+   "reason": "answer's first token equals the concept's first token"
+  },
+  {
+   "item": "shut",
+   "reason": "answer's first token equals the concept's first token"
+  },
+  {
+   "item": "babysit",
+   "reason": "answer's first token equals the concept's first token"
+  },
+  {
+   "item": "overslide",
+   "reason": "answer's first token equals the concept's first token"
+  },
+  {
+   "item": "slink",
+   "reason": "answer's first token equals the concept's first token"
+  },
+  {
+   "item": "slit",
+   "reason": "answer's first token equals the concept's first token"
+  },
+  {
+   "item": "misspend",
+   "reason": "answer's first token equals the concept's first token"
+  },
+  {
+   "item": "outspend",
+   "reason": "answer's first token equals the concept's first token"
+  },
+  {
+   "item": "overspend",
+   "reason": "answer's first token equals the concept's first token"
+  },
+  {
+   "item": "split",
+   "reason": "answer's first token equals the concept's first token"
+  },
+  {
+   "item": "spread",
+   "reason": "answer's first token equals the concept's first token"
+  },
+  {
+   "item": "overspread",
+   "reason": "answer's first token equals the concept's first token"
+  },
+  {
+   "item": "overstride",
+   "reason": "answer's first token equals the concept's first token"
+  },
+  {
+   "item": "forswear",
+   "reason": "answer's first token equals the concept's first token"
+  },
+  {
+   "item": "outswear",
+   "reason": "answer's first token equals the concept's first token"
+  },
+  {
+   "item": "overswing",
+   "reason": "answer's first token equals the concept's first token"
+  },
+  {
+   "item": "retake",
+   "reason": "answer's first token equals the concept's first token"
+  },
+  {
+   "item": "foretell",
+   "reason": "answer's first token equals the concept's first token"
+  },
+  {
+   "item": "retell",
+   "reason": "answer's first token equals the concept's first token"
+  },
+  {
+   "item": "outtell",
+   "reason": "answer's first token equals the concept's first token"
+  },
+  {
+   "item": "outthink",
+   "reason": "answer's first token equals the concept's first token"
+  },
+  {
+   "item": "outthrow",
+   "reason": "answer's first token equals the concept's first token"
+  },
+  {
+   "item": "outthrust",
+   "reason": "answer's first token equals the concept's first token"
+  },
+  {
+   "item": "retread",
+   "reason": "answer's first token equals the concept's first token"
+  },
+  {
+   "item": "interweave",
+   "reason": "answer's first token equals the concept's first token"
+  },
+  {
+   "item": "miswrite",
+   "reason": "answer's first token equals the concept's first token"
+  },
+  {
+   "item": "underwrite",
+   "reason": "answer's first token equals the concept's first token"
+  },
+  {
+   "item": "lade",
+   "reason": "no compatible partner with 2 tokens"
+  }
+ ],
+ "exemplars": [
+  {
+   "answer": "forsook",
+   "concept": "forsake"
+  },
+  {
+   "answer": "sat",
+   "concept": "sit"
+  }
+ ],
+ "minimum": {
+  "dev_pairs": 12,
+  "met": true,
+  "test_pairs": 40
+ },
+ "n_records": 876,
+ "pairs": {
+  "dev": [
+   "begin|partake",
+   "bite|grow",
+   "bring|lend",
+   "find|shoot",
+   "foresee|inlay",
+   "hamstring|sleep",
+   "have|hear",
+   "mischoose|misspeak",
+   "overtake|repay",
+   "prove|stick",
+   "swear|leave",
+   "weep|unwind"
+  ],
+  "test": [
+   "befall|prepay",
+   "bind|lie",
+   "bleed|fling",
+   "break|rise",
+   "breed|overcome",
+   "build|redraw",
+   "buy|dig",
+   "choose|stand",
+   "cling|see",
+   "come|misunderstand",
+   "draw|ride",
+   "feed|go",
+   "feel|undergo",
+   "fight|resell",
+   "flee|eat",
+   "fly|behold",
+   "forgive|fall",
+   "forgo|tread",
+   "hide|forget",
+   "know|slide",
+   "lay|withhold",
+   "make|rerun",
+   "mean|get",
+   "mislead|remake",
+   "mistake|overshoot",
+   "mote|understand",
+   "overdraw|outsing",
+   "overdrive|take",
+   "overhear|blow",
+   "overlay|become",
+   "overlie|forelie",
+   "override|swim",
+   "overrun|rebuild",
+   "oversee|wit",
+   "overwrite|mow",
+   "pay|shake",
+   "redo|hold",
+   "relay|lead",
+   "rend|catch",
+   "resend|forbear",
+   "rewind|think",
+   "run|rethink",
+   "seek|ring",
+   "send|keep",
+   "sew|undertake",
+   "sightsee|overwork",
+   "spend|overthrow",
+   "steal|sing",
+   "strike|rewrite",
+   "sweep|forego",
+   "teach|say",
+   "tell|do",
+   "throw|wind",
+   "unbind|oversleep",
+   "undo|sell",
+   "uphold|meet",
+   "wax|tear",
+   "wear|deal",
+   "win|lose",
+   "withdraw|give",
+   "withstand|underlie"
+  ]
+ },
+ "pairs_by_token_count": {
+  "1": 66,
+  "2": 7
+ },
+ "records_file": "records.jsonl.gz",
+ "records_sha256": "98247efb04f63c3e0de03193b47b2f3d45589a619293fb669d6060044b9d301b",
+ "relation": "verb_past",
+ "role_in_design": "active",
+ "rules": "headword and compound rows with exactly one simple-past form; no archaic (*) forms; no verb listed twice; no modal verbs",
+ "sources": [
+  {
+   "file": "irregular_verbs",
+   "license": "CC-BY-SA-4.0",
+   "origin": "https://en.wiktionary.org/w/index.php?title=Appendix:English_irregular_verbs&oldid=91798533&action=raw",
+   "sha256": "2786deb5d89db65b2f72ff73d20cce10f214b7e8938748cfc87d5d25063f2fe4"
+  }
+ ],
+ "split_seed": 20260928,
+ "task": "R3",
+ "templates": {
+  "T1": "Verb: {c1}\nPast tense: {a1}\n\nVerb: {c2}\nPast tense: {a2}\n\nVerb: {q}\nPast tense:",
+  "T2": "The past tense of {c1} is {a1}. The past tense of {c2} is {a2}. The past tense of {q} is",
+  "T3": "Q: What is the simple past tense of the verb {c1}?\nA: {a1}\n\nQ: What is the simple past tense of the verb {c2}?\nA: {a2}\n\nQ: What is the simple past tense of the verb {q}?\nA:"
+ },
+ "tokenizer": {
+  "bos_token": "<bos>",
+  "bos_token_id": 2,
+  "chat_template_sha256": "7de1c58e208eda46e9c7f86397df37ec49883aeece39fb961e0a6b24088dd3c4",
+  "class": "GemmaTokenizer",
+  "name_or_path": "google/gemma-3-12b-it",
+  "vocab_sha256": "4a6a175ef6cddcbc5bfdc07d086c6a58cdec7a4e36a066b5722a7e933a46da92",
+  "vocab_size": 262145
+ }
+}

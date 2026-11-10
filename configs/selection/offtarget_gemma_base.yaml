@@ -1,0 +1,31 @@
+base: configs/selection/gemma_it.yaml
+stage0_runs:
+  gemma3_12b_pt: runs/inventory-gemma-base
+extension:
+  id: X8c
+  kind: endpoint
+  parent_frozen: runs/selection-gemma-base-dev/frozen_protocol.json
+k_grid:
+- 4
+- 32
+alpha_grid:
+- 1
+offtarget: true
+hybrids:
+  NORM+KAPPA:
+  - NORM
+  - KAPPA
+  NORM+JSPACE:
+  - NORM
+  - JSPACE
+offtarget_contrasts:
+- - JL-OUT
+  - LL-OUT
+- - NORM
+  - JL-OUT
+- - NORM
+  - ORACLE
+- - NORM+KAPPA
+  - NORM
+- - NORM+JSPACE
+  - NORM

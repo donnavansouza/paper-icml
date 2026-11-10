@@ -1,0 +1,8 @@
+base: configs/data/new_tasks.yaml
+tasks:
+- R5
+- R6
+overrides:
+  build:
+    out_dir: data/built_llama
+    tokenizer_model: configs/models/llama3_1_8b.yaml

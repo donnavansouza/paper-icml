@@ -1,0 +1,10 @@
+base: configs/selection/gemma_it.yaml
+stage0_runs:
+  gemma3_12b_pt: runs/inventory-gemma-base
+extension:
+  id: X7b
+  parent_frozen: runs/selection-gemma-base-dev/frozen_protocol.json
+  cells:
+  - 12/concept
+  - 24/concept
+  sae_run: runs/inventory-sae-swap-base-weights

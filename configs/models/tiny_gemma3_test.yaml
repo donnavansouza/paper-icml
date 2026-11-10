@@ -1,0 +1,25 @@
+name: tiny_gemma3_test
+source: tiny-random
+checkpoint_kind: it
+vocab_size: 512
+hidden_size: 64
+intermediate_size: 128
+num_hidden_layers: 6
+num_attention_heads: 2
+num_key_value_heads: 1
+head_dim: 32
+sliding_window: 8
+multimodal: true
+seed: 0
+dtype: float32
+precision_reference: full_fp32
+sae:
+  source: tiny-random
+  candidate_layers:
+  - 1
+  - 2
+  - 3
+  - 4
+  width: 256
+lens:
+  source: tiny-random

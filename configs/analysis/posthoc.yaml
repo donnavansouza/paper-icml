@@ -1,0 +1,97 @@
+seed: 20261009
+models:
+  gemma3_12b_it:
+    run: runs/selection-gemma-it-test
+    frozen: runs/selection-gemma-it-dev/frozen_protocol.json
+    family: gemma
+    release: own
+  llama3_1_8b:
+    run: runs/selection-llama-test
+    frozen: runs/selection-llama-dev/frozen_protocol.json
+    family: llama
+    release: own
+  gemma3_12b_pt:
+    run: runs/selection-gemma-base-test
+    frozen: runs/selection-gemma-base-dev/frozen_protocol.json
+    family: gemma
+    release: own
+sae_runs:
+  x4:
+    run: runs/selection-sae-widths-test
+    frozen: runs/selection-sae-widths-dev/frozen_protocol.json
+    family: gemma
+    release: own
+  x7a:
+    run: runs/selection-sae-swap-it-weights-test
+    frozen: runs/selection-sae-swap-it-weights-dev/frozen_protocol.json
+    family: gemma
+    release: swapped
+  x7b:
+    run: runs/selection-sae-swap-base-weights-test
+    frozen: runs/selection-sae-swap-base-weights-dev/frozen_protocol.json
+    family: gemma
+    release: swapped
+sesoi:
+  grid:
+  - 0.025
+  - 0.05
+  - 0.1
+  cross:
+  - config: configs/analysis/compare_sets_gemma_base.yaml
+    report: analysis/compare-sets-gemma-base/report.json
+  - config: configs/analysis/sae_swap.yaml
+    report: analysis/sae-swap/report.json
+absolute:
+  k:
+  - 4
+  - 32
+  signals:
+  - ASSOC
+  - NORM
+  - LL-OUT
+  - JL-OUT
+  - ATP
+  - ATP@in
+  - PATCH
+  - KAPPA
+  - JSPACE
+  - ORACLE
+  contrasts:
+  - - JL-OUT
+    - LL-OUT
+  - - NORM
+    - JL-OUT
+size:
+  signals:
+  - ASSOC
+  - NORM
+  - LL-OUT
+  - JL-OUT
+  - ATP
+  - PATCH
+  - KAPPA
+  - JSPACE
+  - ORACLE
+  rho:
+  - 0.05
+  - 0.1
+  - 0.25
+  - 0.5
+  pairs:
+  - - JL-OUT
+    - LL-OUT
+  - - NORM
+    - JL-OUT
+  - - NORM
+    - ORACLE
+  - - JL-OUT
+    - ATP
+swap:
+  config: configs/analysis/sae_swap.yaml
+  k:
+  - 32
+  - 4
+fidelity:
+  k:
+  - 4
+  - 32

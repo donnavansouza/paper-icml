@@ -1,0 +1,32 @@
+name: llama3_1_8b
+source: hf
+checkpoint_kind: pt
+repo_id: meta-llama/Llama-3.1-8B
+revision: d04e592bb4f6aa9cfee91e2e20afa771667e1d4b
+dtype: bfloat16
+precision_reference: fp32_residual
+gradient_mode: fp32_grad
+lens:
+  repo_id: neuronpedia/jacobian-lens
+  revision: b25d72a96b79c8e309d6625955a98751da47e67a
+  filename: llama3.1-8b/jlens/Salesforce-wikitext/Llama-3.1-8B_jacobian_lens.pt
+  fit_corpus: Salesforce/wikitext wikitext-103-raw-v1 train
+sae:
+  format: llama_scope
+  repo_id: fnlp/Llama3_1-8B-Base-LXR-8x
+  revision: 8dbc1d85edfced43081c03c38b05514dbab1368b
+  site: resid_post
+  folder_pattern: Llama3_1-8B-Base-L{layer}R-8x
+  candidate_layers:
+  - 8
+  - 16
+  - 21
+  - 27
+  width: 32768
+  l0: null
+  convention_rule:
+    powers:
+    - -1
+    - 0
+    - 1
+    target: top_k

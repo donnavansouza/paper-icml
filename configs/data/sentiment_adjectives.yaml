@@ -1,0 +1,17 @@
+# Relation R6 (film-review sentiment), the pre-declared reserve: used only if R5 fails its dev
+# format gate. Written before any model output on these words. Inclusion rule: single common
+# English adjectives whose plain reading in "The film was ___." is a clearly favorable or clearly unfavorable verdict on the
+# film; no words whose verdict depends on genre (dark, scary, sad, slow, long), no negations and no intensifiers. Pairs join a
+# positive and a negative adjective of the same token count, seeded.
+positive: [wonderful, excellent, great, superb, brilliant, delightful, charming, beautiful, enjoyable, entertaining, fantastic,
+           marvelous, outstanding, terrific, splendid, magnificent, impressive, engaging, gripping, touching, clever, witty, funny,
+           hilarious, thrilling, exciting, compelling, fascinating, stunning, gorgeous, lovely, pleasant, heartfelt, uplifting,
+           inspiring, remarkable, extraordinary, masterful, flawless, perfect, refreshing, smart, powerful, memorable, captivating,
+           enchanting, satisfying, good, nice, fun, joyful, elegant, sublime, exquisite, riveting, stellar, amazing, awesome,
+           incredible, phenomenal, dazzling, glorious, breathtaking, magical, sensational, tremendous, fabulous, inventive]
+negative: [awful, terrible, horrible, dreadful, boring, dull, tedious, bland, poor, bad, weak, lame, stupid, silly, pointless,
+           awkward, clumsy, messy, sloppy, confusing, tiresome, lifeless, forgettable, mediocre, disappointing, frustrating,
+           annoying, irritating, painful, unbearable, unwatchable, pathetic, ridiculous, shallow, hollow, cheap, ugly, miserable,
+           worthless, useless, mindless, predictable, repetitive, overlong, sluggish, stale, trite, insipid, vapid, dreary, abysmal,
+           atrocious, dismal, lousy, rotten, horrid, appalling, ghastly, inept, incompetent, amateurish, bloated, pretentious,
+           tasteless, joyless, incoherent, uninspired, unfunny, laughable]

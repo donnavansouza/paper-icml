@@ -1,0 +1,7 @@
+base: configs/selection/gemma_it.yaml
+extension:
+  id: X4
+  parent_frozen: runs/selection-gemma-it-dev/frozen_protocol.json
+  cells:
+  - 24/concept
+  sae_run: runs/inventory-sae-widths

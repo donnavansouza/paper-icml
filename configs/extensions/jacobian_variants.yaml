@@ -1,0 +1,32 @@
+seed: 20261031
+variants:
+  JL-RAND:
+    draws: 3
+  JL-PERM:
+    draws: 3
+parity_max_abs_m1: 0.001
+holm_alpha: 0.05
+parents:
+  gemma3_12b_it:
+    frozen: runs/selection-gemma-it-dev/frozen_protocol.json
+    dev_run: runs/selection-gemma-it-dev
+    test_run: runs/selection-gemma-it-test
+    other_layer:
+      12: 24
+      24: 12
+      31: 12
+  llama3_1_8b:
+    frozen: runs/selection-llama-dev/frozen_protocol.json
+    dev_run: runs/selection-llama-dev
+    test_run: runs/selection-llama-test
+    other_layer:
+      8: 16
+      16: 8
+      27: 8
+  gemma3_12b_pt:
+    frozen: runs/selection-gemma-base-dev/frozen_protocol.json
+    dev_run: runs/selection-gemma-base-dev
+    test_run: runs/selection-gemma-base-test
+    other_layer:
+      12: 24
+      24: 12

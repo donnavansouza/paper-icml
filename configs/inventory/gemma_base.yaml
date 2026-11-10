@@ -1,0 +1,6 @@
+base: configs/inventory/gemma_it.yaml
+families:
+- R1_country_capital
+- R2_element_symbol
+- R3_verb_past
+- R4_country_language

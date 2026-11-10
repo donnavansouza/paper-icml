@@ -1,0 +1,7 @@
+base: configs/selection/new_tasks_gemma_it.yaml
+stage0_runs:
+  gemma3_12b_pt: runs/inventory-gemma-base
+extension:
+  id: A36-PT
+  kind: model
+  parent_frozen: runs/selection-new-tasks-gemma-it-dev/frozen_protocol.json

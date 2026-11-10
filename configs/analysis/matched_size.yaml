@@ -1,0 +1,31 @@
+seed: 20261109
+runs:
+  gemma3_12b_it_r5r6:
+    run: runs/selection-new-tasks-gemma-it-test
+    frozen: runs/selection-new-tasks-gemma-it-dev/frozen_protocol.json
+  gemma3_12b_pt_r5r6:
+    run: runs/selection-new-tasks-gemma-base-test
+    frozen: runs/selection-new-tasks-gemma-base-dev/frozen_protocol.json
+  llama3_1_8b_r5:
+    run: runs/selection-new-tasks-llama-test
+    frozen: runs/selection-new-tasks-llama-dev/frozen_protocol.json
+size:
+  signals:
+  - NORM
+  - LL-OUT
+  - JL-OUT
+  - ATP
+  - PATCH
+  - ORACLE
+  rho:
+  - 0.05
+  - 0.1
+  - 0.25
+  - 0.5
+  pairs:
+  - - ATP
+    - JL-OUT
+  - - JL-OUT
+    - LL-OUT
+  - - NORM
+    - ORACLE

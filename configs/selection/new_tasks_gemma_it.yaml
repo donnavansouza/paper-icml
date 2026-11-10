@@ -1,0 +1,86 @@
+base: configs/selection/gemma_it.yaml
+data_dir: data/built
+stage0_runs:
+  gemma3_12b_it: runs/inventory-gemma-it
+relations:
+  active:
+  - R5_number_agreement
+  - R6_film_sentiment
+  reserve: null
+eligibility:
+  min_median_r_full: 0.5
+  per_relation: true
+ranking_vs_sets:
+  dissociation:
+  - ATP
+  - JL-OUT
+  budget_dependence:
+    pair:
+    - NORM
+    - ORACLE
+    budget: 0.25
+  toolkit:
+    sets:
+      T0:
+      - NORM
+      - ATP
+      T1:
+      - NORM
+      - ATP
+      - JL-OUT
+    compare:
+    - T1
+    - T0
+    budget: 0.25
+extra_signals:
+- JL-NORM
+hybrids:
+  NORM+JL-OUT:
+  - NORM
+  - JL-OUT
+norm_budget:
+  budgets:
+  - 0.1
+  - 0.25
+  - 0.5
+  selectors:
+  - NORM
+  - LL-OUT
+  - JL-OUT
+  - ATP
+  - PATCH
+  - JL-NORM
+  - NORM+JL-OUT
+  - ORACLE
+  n_random: 20
+  curve_k:
+  - 1
+  - 2
+  - 3
+  - 4
+  - 6
+  - 8
+  - 12
+  - 16
+  - 24
+  - 32
+  - 48
+  - 64
+  family:
+  - JL-OUT
+  - LL-OUT
+  secondary:
+  - - NORM
+    - JL-OUT
+    - 1
+  - - NORM+JL-OUT
+    - NORM
+    - 1
+  - - JL-NORM
+    - NORM
+    - 1
+  - - JL-NORM
+    - JL-OUT
+    - 1
+sae_carried:
+  min_median_sae_all_recovery: 0.5

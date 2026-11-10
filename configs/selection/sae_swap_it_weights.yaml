@@ -1,0 +1,8 @@
+base: configs/selection/gemma_it.yaml
+extension:
+  id: X7a
+  parent_frozen: runs/selection-gemma-it-dev/frozen_protocol.json
+  cells:
+  - 12/concept
+  - 24/concept
+  sae_run: runs/inventory-sae-swap-it-weights

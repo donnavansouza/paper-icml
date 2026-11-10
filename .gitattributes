@@ -1,0 +1,5 @@
+# LF everywhere, so source-file hashes match across operating systems
+* text=auto eol=lf
+*.pt binary
+*.safetensors binary
+*.zip binary

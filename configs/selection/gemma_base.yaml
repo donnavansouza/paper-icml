@@ -1,0 +1,7 @@
+base: configs/selection/gemma_it.yaml
+stage0_runs:
+  gemma3_12b_pt: runs/inventory-gemma-base
+extension:
+  id: X3
+  kind: model
+  parent_frozen: runs/selection-gemma-it-dev/frozen_protocol.json

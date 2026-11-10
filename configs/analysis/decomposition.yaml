@@ -1,0 +1,96 @@
+seed: 20261104
+stage2:
+  gemma3_12b_it_r1r3:
+    run: runs/selection-gemma-it-test
+    frozen: runs/selection-gemma-it-dev/frozen_protocol.json
+  gemma3_12b_pt_r1r3:
+    run: runs/selection-gemma-base-test
+    frozen: runs/selection-gemma-base-dev/frozen_protocol.json
+  llama3_1_8b_r1r3:
+    run: runs/selection-llama-test
+    frozen: runs/selection-llama-dev/frozen_protocol.json
+  gemma3_12b_it_r5r6:
+    run: runs/selection-new-tasks-gemma-it-test
+    frozen: runs/selection-new-tasks-gemma-it-dev/frozen_protocol.json
+  gemma3_12b_pt_r5r6:
+    run: runs/selection-new-tasks-gemma-base-test
+    frozen: runs/selection-new-tasks-gemma-base-dev/frozen_protocol.json
+  llama3_1_8b_r5:
+    run: runs/selection-new-tasks-llama-test
+    frozen: runs/selection-new-tasks-llama-dev/frozen_protocol.json
+extensions:
+  jacobian_controls_gemma3_12b_it:
+    kind: jvariants
+    run: runs/jacobian-controls-gemma-it-test
+  jacobian_controls_gemma3_12b_pt:
+    kind: jvariants
+    run: runs/jacobian-controls-gemma-base-test
+  jacobian_controls_llama3_1_8b:
+    kind: jvariants
+    run: runs/jacobian-controls-llama-test
+  joint_selection_gemma3_12b_it:
+    kind: interact
+    run: runs/joint-selection-gemma-it-test
+  joint_selection_llama3_1_8b:
+    kind: interact
+    run: runs/joint-selection-llama-test
+tail:
+  signals:
+  - JL-OUT
+  - LL-OUT
+  - ATP
+  - NORM
+  - ORACLE
+  - PATCH
+  - JL-OUT@in
+  - ATP@in
+  pairs:
+  - - ATP
+    - JL-OUT
+  - - NORM
+    - ORACLE
+  - - JL-OUT
+    - LL-OUT
+  - - ATP@in
+    - JL-OUT@in
+  k1_tolerance_logodds: 0.001
+pooling:
+  contrasts:
+    P2.1:
+    - JL-OUT
+    - LL-OUT
+    - M1
+    P2.2:
+    - JL-OUT
+    - LL-OUT
+    - M2
+    D1:
+    - ATP
+    - JL-OUT
+    - M1
+    D2:
+    - ATP
+    - JL-OUT
+    - M2
+  denominators:
+  - SAE-ALL
+  - don
+  overshoot_signals:
+  - JL-OUT
+  - LL-OUT
+  - ATP
+  - NORM
+  - ORACLE
+  overshoot_share_above: 2.0
+margin_tests:
+  alpha_superiority: 0.025
+  alpha_equivalence: 0.05
+atp_audit:
+  known:
+    model: gemma3_12b_pt_r1r3
+    trial: R3:know|slide|T3|slide->know
+    cell: 12/concept
+    stored_m1: 0.0467
+    recomputed_m1: 0.7046
+    source: runs/joint-selection-gemma-base-test (RTX PRO 6000) against the A6000-stored value in runs/selection-gemma-base-test
+  screen_below: 0.5

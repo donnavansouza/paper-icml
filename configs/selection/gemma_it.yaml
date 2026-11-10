@@ -1,0 +1,55 @@
+data_dir: data/built
+seed: 20260929
+stage0_runs:
+  gemma3_12b_it: runs/inventory-gemma-it
+relations:
+  active:
+  - R1_country_capital
+  - R2_element_symbol
+  - R3_verb_past
+  reserve: R4_country_language
+format_gate:
+  min_own_mass: 0.5
+  min_abs_margin: 1.0
+  min_template_share: 0.8
+  min_templates: 2
+  test_min_answerable: 0.8
+sites:
+- readout
+- concept
+eligibility:
+  min_median_r_full: 0.5
+k_grid:
+- 1
+- 2
+- 4
+- 8
+- 16
+- 32
+n_random: 20
+primary_k:
+  min_median_oracle_recovery: 0.5
+  default: 32
+m2_min_full_gain: 1.0
+alpha_grid:
+- 0.5
+- 1
+- 2
+jspace_max_atoms: 25
+lens_fidelity:
+  n_directions: 50
+  n_prompts: 50
+  step_fraction: 0.01
+parity_probe:
+  n_sets: 4
+  max_abs_margin_diff: 0.01
+analysis:
+  bootstrap:
+    n_resamples: 10000
+    level: 0.95
+    tost_level: 0.9
+  sesoi:
+    M1: 0.05
+    M2: 0.05
+  holm_alpha: 0.05
+  p23_min_layers: 3

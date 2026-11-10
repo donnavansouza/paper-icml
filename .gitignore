@@ -1,0 +1,26 @@
+# Run and analysis outputs
+runs/
+/analysis/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.venv/
+venv*/
+build/
+dist/
+
+# Editors and OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Data build: third-party files and records are not committed;
+# splits.json and benchmark_card.json under data/built*/ are.
+data/raw/
+data/built*/**/*.jsonl
+data/built*/**/*.jsonl.gz
+data/built*/**/*.new.jsonl.gz

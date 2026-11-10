@@ -1,0 +1,52 @@
+models:
+  it_weights_it_sae:
+    run: runs/selection-gemma-it-test
+    frozen: runs/selection-gemma-it-dev/frozen_protocol.json
+    matched_cells:
+    - 12/concept
+    - 24/concept
+    status: post hoc
+  pt_weights_pt_sae:
+    run: runs/selection-gemma-base-test
+    frozen: runs/selection-gemma-base-dev/frozen_protocol.json
+    matched_cells:
+    - 12/concept
+    - 24/concept
+    status: post hoc
+  it_weights_pt_sae:
+    run: runs/selection-sae-swap-it-weights-test
+    frozen: runs/selection-sae-swap-it-weights-dev/frozen_protocol.json
+    matched_cells:
+    - 12/concept
+    - 24/concept
+    status: declared before data
+  pt_weights_it_sae:
+    run: runs/selection-sae-swap-base-weights-test
+    frozen: runs/selection-sae-swap-base-weights-dev/frozen_protocol.json
+    matched_cells:
+    - 12/concept
+    - 24/concept
+    status: declared before data
+matched_relations:
+- R1_country_capital
+- R2_element_symbol
+- R3_verb_past
+contrasts:
+- name: SAE effect, IT weights
+  model: it_weights_pt_sae
+  reference: it_weights_it_sae
+- name: SAE effect, PT weights
+  model: pt_weights_pt_sae
+  reference: pt_weights_it_sae
+- name: weights effect, IT SAEs
+  model: pt_weights_it_sae
+  reference: it_weights_it_sae
+- name: weights effect, PT SAEs
+  model: pt_weights_pt_sae
+  reference: it_weights_pt_sae
+cross_model_k:
+- 32
+- 4
+holm_k: 32
+holm_alpha: 0.05
+seed: 20261006

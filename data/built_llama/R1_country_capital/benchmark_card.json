@@ -1,0 +1,470 @@
+{
+ "answer_variants": [
+  " {a}",
+  "{a}",
+  " {A}",
+  "{A}"
+ ],
+ "based_on": {
+  "base_config": "configs/data/relations.yaml",
+  "base_config_sha256": "3224a526920981a0feb9deba63e473b7b82cf3042b209de544234e991ba1e764",
+  "overrides": {
+   "build": {
+    "out_dir": "data/built_llama",
+    "tokenizer_model": "configs/models/llama3_1_8b.yaml"
+   }
+  }
+ },
+ "counts": {
+  "after_copy_filter": 181,
+  "after_source_rules": 193,
+  "dev_pairs": 12,
+  "pairs": 87,
+  "source": 250,
+  "test_pairs": 75
+ },
+ "data_config_sha256": "11b3c91adfd4afe4cd4fc952e2d4d3be6784a37415fcfb196e0a98a68bdb2636",
+ "excluded": [
+  {
+   "item": "Aruba",
+   "reason": "not an independent UN member"
+  },
+  {
+   "item": "Anguilla",
+   "reason": "not an independent UN member"
+  },
+  {
+   "item": "Åland Islands",
+   "reason": "not an independent UN member"
+  },
+  {
+   "item": "American Samoa",
+   "reason": "not an independent UN member"
+  },
+  {
+   "item": "Antarctica",
+   "reason": "not an independent UN member"
+  },
+  {
+   "item": "French Southern and Antarctic Lands",
+   "reason": "not an independent UN member"
+  },
+  {
+   "item": "Saint Barthélemy",
+   "reason": "not an independent UN member"
+  },
+  {
+   "item": "Saint Helena, Ascension and Tristan da Cunha",
+   "reason": "not an independent UN member"
+  },
+  {
+   "item": "Bermuda",
+   "reason": "not an independent UN member"
+  },
+  {
+   "item": "Caribbean Netherlands",
+   "reason": "not an independent UN member"
+  },
+  {
+   "item": "Bouvet Island",
+   "reason": "not an independent UN member"
+  },
+  {
+   "item": "Cocos (Keeling) Islands",
+   "reason": "not an independent UN member"
+  },
+  {
+   "item": "Cook Islands",
+   "reason": "not an independent UN member"
+  },
+  {
+   "item": "Curaçao",
+   "reason": "not an independent UN member"
+  },
+  {
+   "item": "Christmas Island",
+   "reason": "not an independent UN member"
+  },
+  {
+   "item": "Cayman Islands",
+   "reason": "not an independent UN member"
+  },
+  {
+   "item": "Western Sahara",
+   "reason": "not an independent UN member"
+  },
+  {
+   "item": "Falkland Islands",
+   "reason": "not an independent UN member"
+  },
+  {
+   "item": "Faroe Islands",
+   "reason": "not an independent UN member"
+  },
+  {
+   "item": "Guernsey",
+   "reason": "not an independent UN member"
+  },
+  {
+   "item": "Gibraltar",
+   "reason": "not an independent UN member"
+  },
+  {
+   "item": "Guadeloupe",
+   "reason": "not an independent UN member"
+  },
+  {
+   "item": "Greenland",
+   "reason": "not an independent UN member"
+  },
+  {
+   "item": "French Guiana",
+   "reason": "not an independent UN member"
+  },
+  {
+   "item": "Guam",
+   "reason": "not an independent UN member"
+  },
+  {
+   "item": "Hong Kong",
+   "reason": "not an independent UN member"
+  },
+  {
+   "item": "Heard Island and McDonald Islands",
+   "reason": "not an independent UN member"
+  },
+  {
+   "item": "Isle of Man",
+   "reason": "not an independent UN member"
+  },
+  {
+   "item": "British Indian Ocean Territory",
+   "reason": "not an independent UN member"
+  },
+  {
+   "item": "Jersey",
+   "reason": "not an independent UN member"
+  },
+  {
+   "item": "Kosovo",
+   "reason": "not an independent UN member"
+  },
+  {
+   "item": "Macau",
+   "reason": "not an independent UN member"
+  },
+  {
+   "item": "Saint Martin",
+   "reason": "not an independent UN member"
+  },
+  {
+   "item": "Northern Mariana Islands",
+   "reason": "not an independent UN member"
+  },
+  {
+   "item": "Montserrat",
+   "reason": "not an independent UN member"
+  },
+  {
+   "item": "Martinique",
+   "reason": "not an independent UN member"
+  },
+  {
+   "item": "Mayotte",
+   "reason": "not an independent UN member"
+  },
+  {
+   "item": "New Caledonia",
+   "reason": "not an independent UN member"
+  },
+  {
+   "item": "Norfolk Island",
+   "reason": "not an independent UN member"
+  },
+  {
+   "item": "Niue",
+   "reason": "not an independent UN member"
+  },
+  {
+   "item": "Pitcairn Islands",
+   "reason": "not an independent UN member"
+  },
+  {
+   "item": "Puerto Rico",
+   "reason": "not an independent UN member"
+  },
+  {
+   "item": "Palestine",
+   "reason": "not an independent UN member"
+  },
+  {
+   "item": "French Polynesia",
+   "reason": "not an independent UN member"
+  },
+  {
+   "item": "Réunion",
+   "reason": "not an independent UN member"
+  },
+  {
+   "item": "South Georgia",
+   "reason": "not an independent UN member"
+  },
+  {
+   "item": "Svalbard and Jan Mayen",
+   "reason": "not an independent UN member"
+  },
+  {
+   "item": "Saint Pierre and Miquelon",
+   "reason": "not an independent UN member"
+  },
+  {
+   "item": "Sint Maarten",
+   "reason": "not an independent UN member"
+  },
+  {
+   "item": "Turks and Caicos Islands",
+   "reason": "not an independent UN member"
+  },
+  {
+   "item": "Tokelau",
+   "reason": "not an independent UN member"
+  },
+  {
+   "item": "Taiwan",
+   "reason": "not an independent UN member"
+  },
+  {
+   "item": "United States Minor Outlying Islands",
+   "reason": "not an independent UN member"
+  },
+  {
+   "item": "British Virgin Islands",
+   "reason": "not an independent UN member"
+  },
+  {
+   "item": "United States Virgin Islands",
+   "reason": "not an independent UN member"
+  },
+  {
+   "item": "Wallis and Futuna",
+   "reason": "not an independent UN member"
+  },
+  {
+   "item": "South Africa",
+   "reason": "3 capitals listed"
+  },
+  {
+   "item": "Andorra",
+   "reason": "answer's first token equals the concept's first token"
+  },
+  {
+   "item": "Djibouti",
+   "reason": "answer's first token equals the concept's first token"
+  },
+  {
+   "item": "Guatemala",
+   "reason": "answer's first token equals the concept's first token"
+  },
+  {
+   "item": "Kuwait",
+   "reason": "answer's first token equals the concept's first token"
+  },
+  {
+   "item": "Luxembourg",
+   "reason": "answer's first token equals the concept's first token"
+  },
+  {
+   "item": "Monaco",
+   "reason": "answer's first token equals the concept's first token"
+  },
+  {
+   "item": "Maldives",
+   "reason": "answer's first token equals the concept's first token"
+  },
+  {
+   "item": "Mexico",
+   "reason": "answer's first token equals the concept's first token"
+  },
+  {
+   "item": "Panama",
+   "reason": "answer's first token equals the concept's first token"
+  },
+  {
+   "item": "Singapore",
+   "reason": "answer's first token equals the concept's first token"
+  },
+  {
+   "item": "São Tomé and Príncipe",
+   "reason": "answer's first token equals the concept's first token"
+  },
+  {
+   "item": "Vatican City",
+   "reason": "answer's first token equals the concept's first token"
+  },
+  {
+   "item": "Somalia",
+   "reason": "no compatible partner with 1 tokens"
+  },
+  {
+   "item": "Togo",
+   "reason": "no compatible partner with 2 tokens"
+  },
+  {
+   "item": "Timor-Leste",
+   "reason": "no compatible partner with 4 tokens"
+  },
+  {
+   "item": "Saint Kitts and Nevis",
+   "reason": "no compatible partner with 6 tokens"
+  },
+  {
+   "item": "Saint Vincent and the Grenadines",
+   "reason": "no compatible partner with 7 tokens"
+  }
+ ],
+ "exemplars": [
+  {
+   "answer": "Nuku'alofa",
+   "concept": "Tonga"
+  },
+  {
+   "answer": "Podgorica",
+   "concept": "Montenegro"
+  }
+ ],
+ "minimum": {
+  "dev_pairs": 12,
+  "met": true,
+  "test_pairs": 40
+ },
+ "n_records": 1044,
+ "pairs": {
+  "dev": [
+   "Armenia|Kazakhstan",
+   "Egypt|Lithuania",
+   "Eswatini|Trinidad and Tobago",
+   "Ghana|Qatar",
+   "Jordan|Niger",
+   "Kenya|Croatia",
+   "Kiribati|United Arab Emirates",
+   "Marshall Islands|New Zealand",
+   "Netherlands|Zambia",
+   "Samoa|Angola",
+   "San Marino|Mauritania",
+   "Slovenia|Albania"
+  ],
+  "test": [
+   "Afghanistan|Venezuela",
+   "Argentina|India",
+   "Australia|Canada",
+   "Austria|Zimbabwe",
+   "Bahamas|Indonesia",
+   "Belarus|Madagascar",
+   "Belgium|Ethiopia",
+   "Bolivia|Pakistan",
+   "Bosnia and Herzegovina|Antigua and Barbuda",
+   "Brazil|Rwanda",
+   "Bulgaria|Bangladesh",
+   "Burkina Faso|Guinea-Bissau",
+   "Cambodia|Slovakia",
+   "Cameroon|Latvia",
+   "Cape Verde|Barbados",
+   "Central African Republic|Tajikistan",
+   "Chad|Germany",
+   "Chile|Ukraine",
+   "China|France",
+   "Comoros|Papua New Guinea",
+   "Costa Rica|Mozambique",
+   "Cuba|Morocco",
+   "Cyprus|Libya",
+   "Denmark|Switzerland",
+   "Dominican Republic|Senegal",
+   "Eritrea|Turkmenistan",
+   "Estonia|Thailand",
+   "Finland|Japan",
+   "Gabon|DR Congo",
+   "Gambia|Mauritius",
+   "Greece|Sudan",
+   "Grenada|El Salvador",
+   "Guinea|Bahrain",
+   "Guyana|Botswana",
+   "Haiti|Philippines",
+   "Hungary|Türkiye",
+   "Iceland|Nigeria",
+   "Iran|Congo",
+   "Iraq|Honduras",
+   "Ireland|Serbia",
+   "Israel|Georgia",
+   "Italy|Spain",
+   "Laos|Tunisia",
+   "Lebanon|Azerbaijan",
+   "Liberia|Uganda",
+   "Liechtenstein|Lesotho",
+   "Malawi|Ivory Coast",
+   "Malaysia|Sweden",
+   "Malta|Fiji",
+   "Micronesia|Equatorial Guinea",
+   "Mongolia|Colombia",
+   "Myanmar|Mali",
+   "Namibia|Burundi",
+   "Nauru|Kyrgyzstan",
+   "Nepal|Russia",
+   "Norway|Algeria",
+   "Oman|Ecuador",
+   "Peru|Vietnam",
+   "Poland|Uruguay",
+   "Portugal|Nicaragua",
+   "Saint Lucia|Moldova",
+   "Saudi Arabia|North Korea",
+   "Seychelles|Vanuatu",
+   "Sierra Leone|Dominica",
+   "Solomon Islands|Czechia",
+   "South Korea|Benin",
+   "South Sudan|Brunei",
+   "Sri Lanka|Bhutan",
+   "Suriname|Tuvalu",
+   "Syria|Romania",
+   "Tanzania|Belize",
+   "United Kingdom|North Macedonia",
+   "United States|Palau",
+   "Uzbekistan|Paraguay",
+   "Yemen|Jamaica"
+  ]
+ },
+ "pairs_by_token_count": {
+  "1": 54,
+  "2": 22,
+  "3": 8,
+  "4": 2,
+  "5": 1
+ },
+ "records_file": "records.jsonl.gz",
+ "records_sha256": "84872ff82480c6880a726045ed6e48797d882a0e1e13fa29f65c9bdcf0e8cfa5",
+ "relation": "country_capital",
+ "role_in_design": "active",
+ "rules": "independent and UN member, exactly one capital",
+ "sources": [
+  {
+   "file": "countries",
+   "license": "ODbL-1.0",
+   "origin": "https://raw.githubusercontent.com/mledoze/countries/c8015eebdd94c533358406b0d709f441389e1f2e/countries.json",
+   "sha256": "99b85dda36895c79caf72e191d035e4b9d82e811ee34f9ca15dfa67d7c561ba8"
+  }
+ ],
+ "split_seed": 20260928,
+ "task": "R1",
+ "templates": {
+  "T1": "Country: {c1}\nCapital: {a1}\n\nCountry: {c2}\nCapital: {a2}\n\nCountry: {q}\nCapital:",
+  "T2": "The capital of {c1} is {a1}. The capital of {c2} is {a2}. The capital of {q} is",
+  "T3": "Q: What is the capital city of {c1}?\nA: {a1}\n\nQ: What is the capital city of {c2}?\nA: {a2}\n\nQ: What is the capital city of {q}?\nA:"
+ },
+ "tokenizer": {
+  "bos_token": "<|begin_of_text|>",
+  "bos_token_id": 128000,
+  "chat_template_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "class": "TokenizersBackend",
+  "name_or_path": "meta-llama/Llama-3.1-8B",
+  "vocab_sha256": "1d87c2f69748ba7bfd11ad4fd7c3917b7e849acb27e8e71d08b2f177061aa99f",
+  "vocab_size": 128256
+ }
+}

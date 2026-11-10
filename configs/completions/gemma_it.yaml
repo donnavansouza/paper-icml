@@ -1,0 +1,15 @@
+data_dir: data/built
+n_per_group: 20
+max_new_tokens: 24
+seed: 20260929
+groups:
+  relations:
+    families:
+    - R1_country_capital
+    - R2_element_symbol
+    - R3_verb_past
+    - R4_country_language
+    by:
+    - template_id
+    roles:
+    - source

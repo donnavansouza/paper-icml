@@ -1,0 +1,4 @@
+base: configs/selection/new_tasks_gemma_it.yaml
+data_dir: data/built_llama
+stage0_runs:
+  llama3_1_8b: runs/inventory-llama

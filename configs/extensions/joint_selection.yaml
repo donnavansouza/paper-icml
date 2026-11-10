@@ -1,0 +1,66 @@
+seed: 20261016
+subset_seed: 20261029
+n_pairs: 40
+k_max: 8
+report_k:
+- 1
+- 2
+- 4
+- 8
+candidates_k: 32
+candidate_selectors:
+- ASSOC
+- NORM
+- LL-OUT
+- JL-OUT
+- ATP
+- PATCH
+- KAPPA
+- JSPACE
+ig_steps: 16
+compare_selectors:
+- NORM
+- LL-OUT
+- JL-OUT
+- ATP
+- PATCH
+atp_parity_max_abs_m1: 0.1
+family:
+- - GREEDY-SUP
+  - JL-OUT
+  - 8
+- - IG
+  - ATP
+  - primary
+secondary:
+- - GREEDY-SUP
+  - NORM
+  - 8
+- - GREEDY-SUP
+  - ATP
+  - 8
+- - IG
+  - JL-OUT
+  - primary
+- - IG
+  - ATP
+  - M1
+- - IG
+  - JL-OUT
+  - M1
+parents:
+  gemma3_12b_it:
+    frozen: runs/selection-gemma-it-dev/frozen_protocol.json
+    dev_run: runs/selection-gemma-it-dev
+    test_run: runs/selection-gemma-it-test
+    cell: 12/concept
+  gemma3_12b_pt:
+    frozen: runs/selection-gemma-base-dev/frozen_protocol.json
+    dev_run: runs/selection-gemma-base-dev
+    test_run: runs/selection-gemma-base-test
+    cell: 12/concept
+  llama3_1_8b:
+    frozen: runs/selection-llama-dev/frozen_protocol.json
+    dev_run: runs/selection-llama-dev
+    test_run: runs/selection-llama-test
+    cell: 8/concept

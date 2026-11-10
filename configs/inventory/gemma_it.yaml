@@ -1,0 +1,57 @@
+data_dir: data/built
+seed: 20260929
+causal_mode: fp32_full
+disk:
+  margin_gb: 5
+checks:
+  N1:
+    max_abs_logit_diff: 0.0001
+    n_prompts: 5
+  N2:
+    max_abs_logit_diff: 0.001
+    top_k: 10
+    n_prompts: 20
+  N3:
+    min_margin_over_neighbors: 0.05
+  N4: {}
+  N5: {}
+  N6:
+    quantile: 0.99
+    n_prompts_per_family: 200
+  N7:
+    n_trials: 50
+    n_features_per_trial: 100
+    ratio_band:
+    - 0.9
+    - 1.1
+    min_share_in_band: 0.95
+    min_spearman: 0.95
+    sites:
+    - readout
+    - concept
+  N8:
+    max_abs_margin_diff: 0.001
+    n_patches: 32
+  N9:
+    max_abs_margin_diff: 0.01
+    n_patches: 32
+    batch_size: 8
+  N10:
+    max_rel_error: 0.05
+    n_features: 10
+    fd_scale: 0.01
+    reference_mode: fp32_full
+  N11: {}
+  N12:
+    tokens: 3500
+    n_patches: 100
+    backward: checkpointed
+    batch_size: 8
+  N13:
+    min_variance_explained: 0.8
+    n_windows: 200
+families:
+- R1_country_capital
+- R2_element_symbol
+- R3_verb_past
+- R4_country_language

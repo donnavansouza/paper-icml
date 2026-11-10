@@ -1,0 +1,259 @@
+{
+ "answer_forms": {
+  "are": [
+   "are",
+   "were"
+  ],
+  "is": [
+   "is",
+   "was"
+  ]
+ },
+ "answer_variants": [
+  " {a}",
+  "{a}",
+  " {A}",
+  "{A}"
+ ],
+ "based_on": {
+  "base_config": "configs/data/relations.yaml",
+  "base_config_sha256": "3224a526920981a0feb9deba63e473b7b82cf3042b209de544234e991ba1e764",
+  "overrides": {
+   "relations": {
+    "R5": {
+     "answer_forms": {
+      "are": [
+       "are",
+       "were"
+      ],
+      "is": [
+       "is",
+       "was"
+      ]
+     },
+     "answers": {
+      "plural": "are",
+      "singular": "is"
+     },
+     "exemplar_answers": [
+      "is",
+      "are"
+     ],
+     "items": {
+      "file": "configs/data/agreement_nouns.yaml",
+      "kind": "number_agreement",
+      "license": "project-declared list"
+     },
+     "keep": "the declared nouns (configs/data/agreement_nouns.yaml); the singular and plural of one noun form a pair when both have the same token count",
+     "name": "number_agreement",
+     "pairing": "same_lemma",
+     "templates": {
+      "T1": "The {c1} over there {a1} new.\nThe {c2} over there {a2} new.\nThe {q} over there",
+      "T2": "In the shop, the {c1} on the left {a1} cheap, and the {c2} on the left {a2} cheap. In the shop, the {q} on the left",
+      "T3": "Q: Is or are? The {c1} over there ___ new.\nA: {a1}\n\nQ: Is or are? The {c2} over there ___ new.\nA: {a2}\n\nQ: Is or are? The {q} over there ___ new.\nA:"
+     }
+    },
+    "R6": {
+     "answers": {
+      "negative": "negative",
+      "positive": "positive"
+     },
+     "exemplar_answers": [
+      "positive",
+      "negative"
+     ],
+     "items": {
+      "file": "configs/data/sentiment_adjectives.yaml",
+      "kind": "word_classes",
+      "license": "project-declared list"
+     },
+     "keep": "the declared adjectives (configs/data/sentiment_adjectives.yaml); a positive and a negative adjective of the same token count form a pair, seeded",
+     "name": "film_sentiment",
+     "templates": {
+      "T1": "Review: The film was {c1}.\nSentiment: {a1}\n\nReview: The film was {c2}.\nSentiment: {a2}\n\nReview: The film was {q}.\nSentiment:",
+      "T2": "The film was {c1}, so the review is {a1}. The film was {c2}, so the review is {a2}. The film was {q}, so the review is",
+      "T3": "Q: The film was {c1}. Is the review positive or negative?\nA: {a1}\n\nQ: The film was {c2}. Is the review positive or negative?\nA: {a2}\n\nQ: The film was {q}. Is the review positive or negative?\nA:"
+     }
+    },
+    "active": [
+     "R5"
+    ],
+    "reserve": "R6"
+   }
+  }
+ },
+ "counts": {
+  "after_copy_filter": 202,
+  "after_source_rules": 202,
+  "dev_pairs": 12,
+  "pairs": 97,
+  "source": 202,
+  "test_pairs": 85
+ },
+ "data_config_sha256": "2b22d89faf269caa33e36d406465dafd11209d48669be23d1af4fd83ba6051ca",
+ "excluded": [
+  {
+   "item": "fridge|fridges",
+   "reason": "forms differ in token count (1 and 2)"
+  },
+  {
+   "item": "kettle|kettles",
+   "reason": "forms differ in token count (1 and 2)"
+  }
+ ],
+ "exemplar_answers": [
+  "is",
+  "are"
+ ],
+ "exemplars": [
+  {
+   "answer": "is",
+   "concept": "engine"
+  },
+  {
+   "answer": "are",
+   "concept": "walls"
+  }
+ ],
+ "minimum": {
+  "dev_pairs": 12,
+  "met": true,
+  "test_pairs": 40
+ },
+ "n_records": 1164,
+ "pairing": "same_lemma",
+ "pairs": {
+  "dev": [
+   "ball|balls",
+   "basket|baskets",
+   "bed|beds",
+   "bench|benches",
+   "candle|candles",
+   "computer|computers",
+   "cushion|cushions",
+   "guitar|guitars",
+   "key|keys",
+   "phone|phones",
+   "stone|stones",
+   "tree|trees"
+  ],
+  "test": [
+   "apple|apples",
+   "bag|bags",
+   "battery|batteries",
+   "bike|bikes",
+   "blanket|blankets",
+   "boat|boats",
+   "book|books",
+   "bottle|bottles",
+   "bowl|bowls",
+   "box|boxes",
+   "bridge|bridges",
+   "bucket|buckets",
+   "building|buildings",
+   "cabinet|cabinets",
+   "cable|cables",
+   "cake|cakes",
+   "camera|cameras",
+   "card|cards",
+   "carpet|carpets",
+   "car|cars",
+   "chair|chairs",
+   "clock|clocks",
+   "coat|coats",
+   "coin|coins",
+   "cup|cups",
+   "curtain|curtains",
+   "desk|desks",
+   "door|doors",
+   "drawer|drawers",
+   "egg|eggs",
+   "envelope|envelopes",
+   "flower|flowers",
+   "folder|folders",
+   "fork|forks",
+   "gate|gates",
+   "glass|glasses",
+   "glove|gloves",
+   "hat|hats",
+   "house|houses",
+   "jacket|jackets",
+   "jar|jars",
+   "knife|knives",
+   "ladder|ladders",
+   "lamp|lamps",
+   "letter|letters",
+   "loaf|loaves",
+   "machine|machines",
+   "map|maps",
+   "mirror|mirrors",
+   "mug|mugs",
+   "notebook|notebooks",
+   "oven|ovens",
+   "painting|paintings",
+   "pan|pans",
+   "pencil|pencils",
+   "pen|pens",
+   "piano|pianos",
+   "picture|pictures",
+   "pillow|pillows",
+   "plate|plates",
+   "pot|pots",
+   "radio|radios",
+   "road|roads",
+   "roof|roofs",
+   "room|rooms",
+   "sandwich|sandwiches",
+   "screen|screens",
+   "shelf|shelves",
+   "shoe|shoes",
+   "sock|socks",
+   "sofa|sofas",
+   "spoon|spoons",
+   "stove|stoves",
+   "table|tables",
+   "tent|tents",
+   "ticket|tickets",
+   "tool|tools",
+   "towel|towels",
+   "tower|towers",
+   "toy|toys",
+   "truck|trucks",
+   "umbrella|umbrellas",
+   "wallet|wallets",
+   "wheel|wheels",
+   "window|windows"
+  ]
+ },
+ "pairs_by_token_count": {
+  "1": 97
+ },
+ "records_file": "records.jsonl.gz",
+ "records_sha256": "2e865ffb29eba09465103b8d170e487531483d278d93b5081a0525a0acb5730c",
+ "relation": "number_agreement",
+ "role_in_design": "active",
+ "rules": "the declared nouns (configs/data/agreement_nouns.yaml); the singular and plural of one noun form a pair when both have the same token count",
+ "sources": [
+  {
+   "file": "configs/data/agreement_nouns.yaml",
+   "license": "project-declared list",
+   "sha256": "883a162f3a1a5b82b7ef0ba9cc9fd27691643c291b14d41876138d144839ac1b"
+  }
+ ],
+ "split_seed": 20260928,
+ "task": "R5",
+ "templates": {
+  "T1": "The {c1} over there {a1} new.\nThe {c2} over there {a2} new.\nThe {q} over there",
+  "T2": "In the shop, the {c1} on the left {a1} cheap, and the {c2} on the left {a2} cheap. In the shop, the {q} on the left",
+  "T3": "Q: Is or are? The {c1} over there ___ new.\nA: {a1}\n\nQ: Is or are? The {c2} over there ___ new.\nA: {a2}\n\nQ: Is or are? The {q} over there ___ new.\nA:"
+ },
+ "tokenizer": {
+  "bos_token": "<bos>",
+  "bos_token_id": 2,
+  "chat_template_sha256": "7de1c58e208eda46e9c7f86397df37ec49883aeece39fb961e0a6b24088dd3c4",
+  "class": "GemmaTokenizer",
+  "name_or_path": "google/gemma-3-12b-it",
+  "vocab_sha256": "4a6a175ef6cddcbc5bfdc07d086c6a58cdec7a4e36a066b5722a7e933a46da92",
+  "vocab_size": 262145
+ }
+}
